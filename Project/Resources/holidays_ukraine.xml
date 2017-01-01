@@ -1,0 +1,47 @@
+<notablesdays>
+  <notableday name="New year" openday="false">
+    <month>1</month>
+    <day>1</day>
+    <localname value="Новий Рік" />
+  </notableday>
+  <notableday name="Orthodox Christmas" openday="false">
+    <month>1</month>
+    <day>7</day>
+    <localname value="Різдво" />
+  </notableday>
+  <notableday name="International Women's Day" openday="false">
+    <month>3</month>
+    <day>8</day>
+	<localname value="Міжнародний жіночий день" />
+  </notableday>
+  <notableday name="Easter" openday="false">
+  	 <easter />
+  	 <localname value="Великдень" />
+  </notableday>
+     <notableday name="Orthodox Pentecost" openday="false">
+         <daysafterholiday holiday="Easter">
+             <days>49</days>
+         </daysafterholiday>
+         <localname value="Трійця" />
+     </notableday>
+  <notableday name="Victory Day over Nazism in World War II" openday="false">
+    <month>5</month>
+    <day>9</day>
+	<localname value="День перемоги над нацизмом у Другій світовій війні" />
+  </notableday>
+  <notableday name="Constitution Day" openday="false">
+    <month>6</month>
+    <day>28</day>
+	<localname value="День Конституції" />
+  </notableday>
+  <notableday name="Independence Day" openday="false">
+    <month>8</month>
+    <day>24</day>
+	<localname value="День Незалежності" />
+  </notableday>
+  <notableday name="Defender of Ukraine Day" openday="false">
+    <month>10</month>
+    <day>14</day>
+	<localname value="День захисника України" />
+  </notableday>
+<notablesdays>

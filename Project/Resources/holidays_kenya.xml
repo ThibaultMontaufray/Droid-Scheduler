@@ -1,0 +1,57 @@
+<notablesdays>
+     <notableday name="New year's day" openday="false">
+         <month>1</month>
+         <day>1</day>
+         <localname value="Jour de l'an" />
+     </notableday>  
+     <notableday name="Easter" openday="false">
+         <easter />
+         <localname value="Easter" />
+     </notableday>
+     <notableday name="Easter Monday" openday="false">
+         <daysafterholiday holiday="Easter">
+             <days>1</days>
+         </daysafterholiday>
+         <localname value="Lundi de Paques" />
+     </notableday>
+     <notableday name="Easter Fridsay" openday="false">
+         <daysafterholiday holiday="Easter">
+             <days>-2</days>
+         </daysafterholiday>
+         <localname value="vendredi de Paques" />
+     </notableday>
+     <notableday name="Labor's day" openday="false">
+         <month>5</month>
+         <day>1</day>
+         <localname value="Fête du travail" />
+     </notableday>  
+     <notableday name="Madaraka Day" openday="false">
+        <month>6</month>
+         <day>1</day>
+         <localname value="Madaraka Day" />
+     </notableday>  
+     <notableday name="Mashujaa Day" openday="false">
+         <month>1</month>
+         <day>20</day>
+         <localname value="Mashujaa Day" />
+     </notableday>  
+     <notableday name="Jamhuri Day" openday="false">
+         <month>12</month>
+         <day>12</day>
+         <localname value="Fête nationale" />
+     </notableday>  
+     <notableday name="Chrismas day" openday="false">
+         <month>12</month>
+         <day>25</day>
+         <localname value="Noel" />
+     </notableday>
+     <notableday name="Boxing day" openday="false">
+         <month>12</month>
+         <day>26</day>
+         <localname value="Noel" />
+     </notableday>
+     <notableday name="Idd-Ul-Fitr" openday="false">
+         <date>rupture du jeun avec le ramadan</day>
+         <localname value="Idd-Ul-Fitr" />
+     </notableday>
+</notablesdays>

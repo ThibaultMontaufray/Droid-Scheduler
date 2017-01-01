@@ -1,0 +1,66 @@
+<notablesdays>
+  <notableday name="New year's day" openday="false">
+    <month>1</month>
+    <day>1</day>
+    <localname value="رأس العام	" />
+  </notableday>
+  <notableday name="Revolution and Youth Day" openday="false">
+    <month>1</month>
+    <day>14</day>
+    <localname value="عيد الثورة و الشباب" />
+  </notableday>
+  <notableday name="Independence Day" openday="false">
+    <month>3</month>
+    <day>20</day>
+    <localname value="عيد الإستقلال" />
+  </notableday>
+  <notableday name="Martyrs' Day" openday="false">
+    <month>4</month>
+    <day>9</day>
+    <localname value="عيد الشهداء" />
+  </notableday>
+  <notableday name="Labour day" openday="false">
+    <month>5</month>
+    <day>1</day>
+    <localname value="عيد الشغل" />
+  </notableday>
+  <notableday name="Republic Day" openday="false">
+    <month>7</month>
+    <day>25</day>
+    <localname value="عيد الجمهورية" />
+  </notableday>
+  <notableday name="Women's Day" openday="false">
+    <month>8</month>
+    <day>13</day>
+    <localname value="عيد المرأة" />
+  </notableday>
+  <notableday name="Evacuation Day" openday="false">
+    <month>10</month>
+    <day>15</day>
+    <localname value="عيد الجلاء" />
+  </notableday>
+  <notableday name="Ras el-Am el-Hijri" openday="false">
+    <calendar>hijri</calendar>
+    <month>1</month>
+    <day>1</day>
+    <localname value="رأس العام الهجري" />
+  </notableday>
+  <notableday name="Mawlid" openday="false">
+    <calendar>hijri</calendar>
+    <month>3</month>
+    <day>12</day>
+    <localname value="المولد النبوي" />
+  </notableday>
+  <notableday name="Aïd el-Fitr" openday="false">
+    <calendar>hijri</calendar>
+    <month>10</month>
+    <day>1</day>
+    <localname value="العيد الصغير" />
+  </notableday>
+  <notableday name="Aïd el-Kebir" openday="false">
+    <calendar>hijri</calendar>
+    <month>12</month>
+    <day>10</day>
+    <localname value="العيد الكبير" />
+  </notableday>
+</notablesdays>

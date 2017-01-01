@@ -1,0 +1,62 @@
+<notablesdays>
+     <notableday name="New year's day" openday="false">
+         <month>1</month>
+         <day>1</day>
+         <localname value="Новый год" />
+     </notableday>
+     <notableday name="Orthodoxe Chrismas day" openday="false">
+         <month>1</month>
+         <day>7</day>
+         <localname value="Рождество Христово" />
+     </notableday>
+     <notableday name="New old year's day" openday="true">
+         <month>1</month>
+         <day>13</day>
+         <localname value="Старый новый год" />
+     </notableday>
+     <notableday name="Defender of the Homeland" openday="false">
+         <month>2</month>
+         <day>23</day>
+         <localname value="День Защитника Отечества" />
+     </notableday>
+     <notableday name="International women day" openday="false">
+         <month>3</month>
+         <day>8</day>
+         <localname value="Международный женский день" />
+     </notableday>
+     <notableday name="Labour day" openday="false">
+         <month>4</month>
+         <day>30</day>
+         <localname value="День труда" />
+     </notableday>
+     <notableday name="Spring day" openday="false">
+         <month>5</month>
+         <day>1</day>
+         <localname value="Праздник весны и труда" />
+     </notableday>
+     <notableday name="Victory day" openday="false">
+         <month>5</month>
+         <day>9</day>
+         <localname value="День Победы в Великой Отечественной войне" />
+     </notableday>
+     <notableday name="Russian day" openday="false">
+         <month>6</month>
+         <day>12</day>
+         <localname value="День России" />
+     </notableday>
+     <notableday name="Nationnal unity day" openday="false">
+         <month>11</month>
+         <day>4</day>
+         <localname value="День национального единства" />
+     </notableday>
+     <notableday name="Reconciliation day" openday="true">
+         <month>11</month>
+         <day>7</day>
+         <localname value="День согласия и примирения" />
+     </notableday>
+     <notableday name="Constitution day" openday="true">
+         <month>12</month>
+         <day>12</day>
+         <localname value="День Конституциия" />
+     </notableday>
+</notablesdays>

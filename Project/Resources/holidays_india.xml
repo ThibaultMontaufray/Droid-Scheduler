@@ -1,0 +1,95 @@
+<notablesdays>
+     <notableday name="Easter" openday="false">
+         <easter />
+         <localname value="Easter" />
+     </notableday>
+     <notableday name="New year's day" openday="false">
+         <calendar>julian</calendar>
+         <month>1</month>
+         <day>1</day>
+         <localname value="New year's day" />
+     </notableday>
+     <notableday name="Pongal" openday="false">
+         <calendar>julian</calendar>
+         <month>1</month>
+         <day>15</day>
+         <localname value="Makara Sankranthi" />
+     </notableday>
+     <notableday name="Mahashivaratri" openday="false">
+         <calendar>hindu</calendar>
+         <month>magha</month>
+         <moon>krishna</moon>
+         <day>chaturdashi</day>
+         <localname value="Mahashivaratri" />
+     </notableday>
+     <notableday name="Chandramana Ugadi" openday="false">
+         <calendar>hindu</calendar>
+         <month>chaitra</month>
+         <moon>shukla</moon>
+         <day>prathama</day>
+         <localname value="Chandramana Ugadi" />
+     </notableday>
+     <notableday name="Good Friday" openday="false">
+         <calendar>julian</calendar>
+         <daysafternotableday notableday="Easter">
+             <days>-2</days>
+         </daysafternotableday>
+         <localname value="Good Friday" />
+     </notableday>
+     <notableday name="Labour day" openday="false">
+         <calendar>julian</calendar>
+         <month>5</month>
+         <day>1</day>
+         <localname value="May day" />
+     </notableday>
+     <notableday name="Ramzan eid-ul-fitr" openday="false">
+         <calendar>islamic</calendar>
+         <month></month>
+         <moon></moon>
+         <day></day>
+         <localname value="Ramzan eid-ul-fitr" />
+         <description value="first day of the month of Shawwal" />
+     </notableday>
+     <notableday name="Independance day" openday="false">
+         <calendar>julian</calendar>
+         <month>8</month>
+         <day>15</day>
+         <localname value="Independance day" />
+     </notableday>
+     <notableday name="Ganesha Chaturthi" openday="false">
+         <calendar>hindu</calendar>
+         <month_begin>bhadrapada</month_begin>
+         <moon_begin>shukla</moon_begin>
+         <day_begin>chaturthi</day_begin>
+         <month_end>bhadrapada</month_end>
+         <moon_begin>shukla</moon_begin>
+         <day_begin>chaturdashi</day_begin>
+         <localname value="Ganesha Chaturthi" />
+     </notableday>
+     <notableday name="Gandhi's birthday" openday="false">
+         <calendar>julian</calendar>
+         <month>9</month>
+         <day>2</day>
+         <localname value="Gandhi Janyanthi" />
+     </notableday>
+     <notableday name="Ayudha Pooja" openday="false">
+         <calendar>hindu</calendar>
+         <month>jyestha</month>
+         <moon>shukla</moon>
+         <day>prathama</day>
+         <localname value="Mahanavami / Ayudha Pooja" />
+     </notableday>
+     <notableday name="Diwali" openday="false">
+         <calendar>hindu</calendar>
+         <month>kartika</month>
+         <moon>shukla</moon>
+         <day>prathama</day>
+         <localname value="Balipadyami" />
+     </notableday>
+     <notableday name="Chrismas day" openday="false">
+         <calendar>julian</calendar>
+         <month>12</month>
+         <day>25</day>
+         <localname value="Christmas" />
+     </notableday>
+</notablesdays>

@@ -1,0 +1,22 @@
+<notablesdays>
+     <notableday name="New year's day" openday="false">
+         <month>1</month>
+         <day>1</day>
+         <localname value="Jour de l'an" />
+     </notableday>  
+     <notableday name="Labor's day" openday="false">
+         <month>5</month>
+         <day>1</day>
+         <localname value="Fête du travail" />
+     </notableday>  
+     <notableday name="Africa's day" openday="false">
+         <month>5</month>
+         <day>25</day>
+         <localname value="Fête de l'Afrique" />
+     </notableday>  
+     <notableday name="Chrismas day" openday="false">
+         <month>12</month>
+         <day>25</day>
+         <localname value="Noel" />
+     </notableday>
+</notablesdays>

@@ -1,0 +1,12 @@
+<notablesdays>
+     <notableday name="Independance's Day" openday="false">
+         <month>8</month>
+         <day>13</day>
+         <localname value="Fête de l'Indépendance" />
+     </notableday>
+     <notableday name="Nationnal's day" openday="false">
+         <month>12</month>
+         <day>1</day>
+         <localname value="Fête nationale" />
+     </notableday>
+</notablesdays>

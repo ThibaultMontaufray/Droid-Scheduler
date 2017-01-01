@@ -1,0 +1,102 @@
+<notablesdays>
+     <notableday name="New year's day" openday="false">
+         <month>1</month>
+         <day>1</day>
+         <localname value="New Year's Day" />
+     </notableday>
+     <notableday name="New year's day after" openday="false">
+         <month>1</month>
+         <day>2</day>
+         <localname value="New Year's Day after" />
+         <region value="EC" />
+     </notableday>
+     <notableday name="Saint Patrick's Day" openday="false">
+         <month>3</month>
+         <day>17</day>
+         <localname value="Saint Patrick's Day" />
+         <region value="IN" />
+     </notableday>
+     <notableday name="Easter" openday="false">
+         <easter />
+         <localname value="Paques" />
+     </notableday>
+     <notableday name="Good Friday" openday="false">
+         <daysafterholiday holiday="Easter">
+             <days>-2</days>
+         </daysafterholiday>
+         <localname value="Vendredi saint" />
+     </notableday>
+     <notableday name="Easter Monday" openday="false">
+         <daysafterholiday holiday="Easter">
+             <days>1</days>
+         </daysafterholiday>
+         <localname value="Easter Monday" />
+         <region value="AN;PG;IN" />
+     </notableday>
+     <notableday name="Labour's day" openday="false">
+         <weekdayinmonth>
+           <month>5</month>
+           <weekday>1</weekday>
+           <weekdaynum>1</weekdaynum>
+         </weekdayinmonth>
+         <localname value="May Day Bank Holiday" />
+         <region value="AN;PG;IN" />
+     </notableday>
+     <notableday name="Labour's day" openday="false">
+         <weekdayinmonth>
+           <month>5</month>
+           <weekday>1</weekday>
+           <weekdaynum>1</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Early May Bank Holiday" />
+         <region value="EC" />
+     </notableday>
+     <notableday name="Labour's day" openday="false">
+         <weekdayinmonth>
+           <month>5</month>
+           <weekday>1</weekday>
+           <weekdaynum>-1</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Spring Bank Holiday" />
+     </notableday>
+     <notableday name="Boyne battle" openday="false">
+         <month>7</month>
+         <day>12</day>
+         <localname value="Orangemen's Day" />
+         <region value="IN" />
+     </notableday>
+     <notableday name="Summer Bank Holiday" openday="false">
+         <weekdayinmonth>
+           <month>8</month>
+           <weekday>1</weekday>
+           <weekdaynum>1</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Summer Bank Holiday" />
+         <region value="EC" />
+     </notableday>
+     <notableday name="Summer Bank Holiday" openday="false">
+         <weekdayinmonth>
+           <month>8</month>
+           <weekday>1</weekday>
+           <weekdaynum>-1</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Summer Bank Holiday" />
+         <region value="AN;PG;IN" />
+     </notableday>
+     <notableday name="St. Andrew's Day" openday="false">
+         <month>11</month>
+         <day>30</day>
+         <localname value="St. Andrew's Day" />
+         <region value="EC" />
+     </notableday>
+     <notableday name="Chrismas day" openday="false">
+         <month>12</month>
+         <day>25</day>
+         <localname value="Chrismas day" />
+     </notableday>  
+     <notableday name="Boxing Day" openday="false">
+         <month>12</month>
+         <day>26</day>
+         <localname value="St. Stephen's Day" />
+     </notableday>  
+</notablesdays>

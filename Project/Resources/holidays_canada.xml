@@ -1,0 +1,164 @@
+<notablesdays>
+     <notableday name="New year's day" openday="false">
+         <month>1</month>
+         <day>1</day>
+         <localname value="Jour de l'an" />
+     </notableday>
+     <notableday name="Louis Riel Day" openday="false">
+         <weekdayinmonth>
+           <month>2</month>
+           <weekday>1</weekday>
+           <weekdaynum>3</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Louis Riel Day" />
+         <region value="MB" />
+     </notableday>
+     <notableday name="Islander Day" openday="false">
+         <weekdayinmonth>
+           <month>2</month>
+           <weekday>1</weekday>
+           <weekdaynum>3</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Islander Day" />
+         <region value="PE" />
+     </notableday>
+     <notableday name="Family Day" openday="false">
+         <weekdayinmonth>
+           <month>2</month>
+           <weekday>1</weekday>
+           <weekdaynum>3</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Family Day" />
+         <region value="AB;BC;ON;SK" />
+     </notableday>
+     <notableday name="Saint Patrick's Day" openday="false">
+         <month>3</month>
+         <day>17</day>
+         <localname value="Saint Patrick's Day" />
+         <region value="NL" />
+     </notableday>  
+     <notableday name="Easter" openday="false">
+         <easter />
+         <localname value="Easter" />
+     </notableday>
+     <notableday name="Easter Monday" openday="false">
+         <daysafterholiday holiday="Easter">
+             <days>1</days>
+         </daysafterholiday>
+         <localname value="Lundi de Paques" />
+         <region value="AB;PE;QC" />
+     </notableday>
+     <notableday name="Good Friday" openday="false">
+         <daysafterholiday holiday="Easter">
+             <days>-2</days>
+         </daysafterholiday>
+         <localname value="Good Friday" />
+     </notableday>
+     <notableday name="Journée nationale des patriotes" openday="false">
+         <month>5</month>
+         <day>17</day>
+         <weekday>monday</weekday>
+         <localname value="Journée nationale des patriotes" />
+         <region value="QC" />
+     </notableday>
+     <notableday name="Victoria Day" openday="false">
+         <month>5</month>
+         <day>17</day>
+         <weekday>monday</weekday>
+        <localname value="Victoria Day" />
+         <region value="AB;BC;MB;NB;NT;NS;NU;ON;PE;SK;YT" />
+     </notableday>
+     <notableday name="National Aboriginal Day" openday="false">
+         <month>6</month>
+         <day>21</day>
+         <localname value="National Aboriginal Day" />
+         <region value="NT" />
+     </notableday>
+     <notableday name="Discovery Day" openday="false">
+         <month>6</month>
+         <day>24</day>
+         <localname value="Discovery Day" />
+         <region value="NL;YT" />
+     </notableday>
+     <notableday name="Fête nationale du Québec" openday="false">
+         <month>6</month>
+         <day>24</day>
+         <localname value="Fête nationale du Québec" />
+         <region value="QC" />
+     </notableday>
+     <notableday name="Canada Day" openday="false">
+         <month>7</month>
+         <day>1</day>
+         <localname value="Canada Day" />
+     </notableday>
+     <notableday name="Orangemen's Day" openday="false">
+         <month>7</month>
+         <day>12</day>
+         <localname value="Orangemen's Day" />
+         <region value="NL" />
+     </notableday>
+     <notableday name="Civic Holiday" openday="false">
+         <month>8</month>
+         <weekday>monday</weekday>
+         <weekdaynumber>1</weekdaynumber>
+         <localname value="Civic Holiday" />
+         <region value="MB;NT;NU" />
+     </notableday>
+     <notableday name="Heritage Day" openday="false">
+         <month>8</month>
+         <weekday>monday</weekday>
+         <weekdaynumber>1</weekdaynumber>
+         <localname value="Heritage Day" />
+         <region value="AB;YT" />
+     </notableday>
+     <notableday name="Natal Day" openday="false">
+         <month>8</month>
+         <weekday>monday</weekday>
+         <weekdaynumber>1</weekdaynumber>
+         <localname value="Natal Day" />
+         <region value="NS" />
+     </notableday>
+     <notableday name="Gold Cup Parade Day" openday="false">
+         <month>8</month>
+         <weekday>friday</weekday>
+         <weekdaynumber>3</weekdaynumber>
+         <localname value="Gold Cup Parade Day" />
+         <region value="PE" />
+     </notableday>
+     <notableday name="Labour day" openday="false">
+         <month>9</month>
+         <weekday>monday</weekday>
+         <weekdaynumber>1</weekdaynumber>
+         <localname value="Labour day" />
+     </notableday>
+     <notableday name="Thanksgiving" openday="false">
+         <month>10</month>
+         <weekday>monday</weekday>
+         <weekdaynumber>2</weekdaynumber>
+         <localname value="Thanksgiving" />
+         <region value="AB;BC;MB;NB;NT;NS;NU;ON;PE;QC;SK;YT" />
+     </notableday>
+     <notableday name="Armistice Day" openday="false">
+         <month>11</month>
+         <day>11</day>
+         <localname value="Armistice Day" />
+         <region value="NL" />
+     </notableday>
+     <notableday name="Remembrance Day" openday="false">
+         <month>11</month>
+         <day>11</day>
+         <localname value="Remembrance Day" />
+         <region value="AB;BC;NB;NT;NS;NU;PE;SK;YT" />
+     </notableday>
+     <notableday name="Chrismas day" openday="false">
+        <month>12</month>
+         <day>25</day>
+         <localname value="Chrismas day" />
+     </notableday>  
+     <notableday name="Boxing Day" openday="false">
+         <month>12</month>
+         <day>26</day>
+         <localname value="Boxing Day" />
+         <region value="AB;NB;NS;ON;PE;QC" />
+     </notableday>  
+</notablesdays>

@@ -1,0 +1,42 @@
+<notablesdays>
+     <notableday name="New year's day" openday="false">
+         <month>1</month>
+         <day>1</day>
+         <localname value="Jour de l'an" />
+     </notableday>
+     <notableday name="National liberation" openday="false">
+         <month>1</month>
+         <day>13</day>
+         <localname value="Libération nationale" />
+     </notableday>
+     <notableday name="Economic liberation" openday="false">
+         <month>1</month>
+         <day>24</day>
+         <localname value="Libération économique" />
+     </notableday>
+     <notableday name="Independance' day" openday="false">
+         <month>4</month>
+         <day>27</day>
+         <localname value="Fête de l'indépendace" />
+     </notableday>
+     <notableday name="Labour's day" openday="false">
+         <month>5</month>
+         <day>1</day>
+         <localname value="Fête du travail" />
+     </notableday>
+     <notableday name="togo's martyrs" openday="false">
+         <month>6</month>
+         <day>21</day>
+         <localname value="Martyrs du Togo" />
+     </notableday>
+     <notableday name="Terrorist attak commemoration" openday="false">
+         <month>9</month>
+         <day>23</day>
+         <localname value="Commémoration de l’attaque terroriste" />
+     </notableday>
+     <notableday name="Chrismas day" openday="false">
+         <month>12</month>
+         <day>25</day>
+         <localname value="Noël" />
+     </notableday>  
+</notablesdays>

@@ -1,0 +1,59 @@
+<notablesdays>
+  <notableday name="New year's day" openday="false">
+    <month>1</month>
+    <day>1</day>
+    <localname value="New Year's Day" />
+  </notableday>
+  <notableday name="Day after New Year's Day" openday="false">
+    <month>1</month>
+    <day>2</day>
+    <localname value="Day after New Year's Day" />
+  </notableday>
+  <notableday name="Waitangi Day" openday="false">
+    <month>1</month>
+    <day>6</day>
+    <localname value="Waitangi Day" />
+  </notableday>
+  <notableday name="Easter" openday="false">
+    <easter />
+    <localname value="Easter" />
+  </notableday>
+  <notableday name="Easter Monday" openday="false">
+    <daysafterholiday holiday="Easter">
+      <days>1</days>
+    </daysafterholiday>
+    <localname value="Easter Monday" />
+  </notableday>
+  <notableday name="Good Friday" openday="false">
+    <daysafterholiday holiday="Easter">
+      <days>-2</days>
+    </daysafterholiday>
+    <localname value="Good Friday" />
+  </notableday>
+  <notableday name="Anzac Day" openday="false">
+    <month>4</month>
+    <day>25</day>
+    <localname value="Anzac Day" />
+  </notableday>
+  <notableday name="Labour day" openday="false">
+    <month>5</month>
+    <day>1</day>
+    <localname value="Labour day" />
+  </notableday>
+  <notableday name="Chrismas day" openday="false">
+    <month>12</month>
+    <day>25</day>
+    <localname value="Chrismas day" />
+  </notableday>
+  <notableday name="Boxing Day" openday="false">
+    <month>12</month>
+    <day>26</day>
+    <localname value="Boxing Day" />
+  </notableday>
+  <notableday name="Queen's Birthday" openday="false">
+    <month>7</month>
+    <weekday>monday</weekday>
+    <weekdaynumber>1</weekdaynumber>
+    <localname value="Queen's Birthday" />
+  </notableday>
+</notablesdays>

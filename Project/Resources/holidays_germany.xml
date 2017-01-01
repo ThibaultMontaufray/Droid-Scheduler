@@ -1,0 +1,104 @@
+<notablesdays>
+     <notableday name="New year's day" openday="false">
+         <month>1</month>
+         <day>1</day>
+         <localname value="Neujahrstag" />
+     </notableday>
+     <notableday name="Épiphanie" openday="false">
+         <month>1</month>
+         <day>6</day>
+         <localname value="Heilige Drei Könige" />
+         <region value="BW;BY;ST" />
+     </notableday>
+     <notableday name="Easter" openday="false">
+         <easter />
+         <localname value="Easter" />
+     </notableday>
+     <notableday name="Easter Monday" openday="false">
+         <daysafterholiday holiday="Easter">
+             <days>1</days>
+         </daysafterholiday>
+         <localname value="Ostermontag" />
+     </notableday>
+     <notableday name="Easter" openday="false">
+         <easter />
+         <localname value="Easter" />
+     </notableday>
+     <notableday name="Good Friday" openday="false">
+         <daysafterholiday holiday="Easter">
+             <days>-2</days>
+         </daysafterholiday>
+         <localname value="Karfreitag" />
+     </notableday>
+     <notableday name="Labour day" openday="false">
+         <month>5</month>
+         <day>1</day>
+         <localname value="Tag der Arbeit" />
+     </notableday>
+     <notableday name="Peace day" openday="true">
+         <month>8</month>
+         <day>8</day>
+         <localname value="Friedensfest" />
+     </notableday>
+     <notableday name="Assomption" openday="false">
+         <month>8</month>
+         <day>15</day>
+         <localname value="Mariä Himmelfahrt" />
+         <region value="SL" />
+     </notableday>
+     <notableday name="German unity" openday="false">
+         <month>9</month>
+         <day>3</day>
+         <localname value="Tag der Deutschen Einheit" />
+     </notableday>
+     <notableday name="Reformations' day" openday="false">
+         <month>9</month>
+         <day>31</day>
+         <localname value="Reformationstag" />
+         <region value="BB;MV;SN;ST;TH" />
+     </notableday>
+     <notableday name="All Saints' day" openday="false">
+         <month>11</month>
+         <day>1</day>
+         <localname value="Allerheiligen" />
+         <region value="BW;BY;NW;RP;SL" />
+     </notableday>
+     <notableday name="Chrismas day" openday="false">
+         <month>12</month>
+         <day>25</day>
+         <localname value="Weihnachtstag" />
+     </notableday>
+     <notableday name="Chrismas tomorow's day" openday="false">
+         <month>12</month>
+         <day>26</day>
+         <localname value="Zweiter Weihnachtsfeiertag" />
+     </notableday>
+     <notableday name="Ascension day" openday="false">
+         <monthafterholiday holiday="Easter">
+             <month>39</month>
+         </monthafterholiday>
+         <localname value="Christi Himmelfahrt" />
+     </notableday>
+     <notableday name="Whit day" openday="false">
+         <monthafterholiday holiday="Easter">
+             <month>50</month>
+         </monthafterholiday>
+         <localname value="Pfingstmontag" />
+     </notableday>
+     <notableday name="God day" openday="false">
+         <monthafterholiday holiday="Easter">
+             <month>60</month>
+         </monthafterholiday>
+         <localname value="Fronleichnam" />
+         <region value="BW;BY;HE;NW;RP;SL" />
+     </notableday>
+     <notableday name="penitence priest day" openday="false">
+         <dayofweekonorbefore>
+             <month>11</month>
+             <day>23</day>
+             <dayofweek>4</dayofweek>
+         </dayofweekonorbefore>
+         <localname value="Buß- und Bettag" />
+         <region value="SN" />
+     </notableday>
+</notablesdays>

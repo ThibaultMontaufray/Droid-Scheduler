@@ -1,0 +1,228 @@
+<notablesdays>
+  <notableday name="New year's day" openday="false">
+    <month>1</month>
+    <day>1</day>
+    <localname value="Hari Tahun Baharu" />
+	<region value="kuala_lumpur;labuan_territory;malacca;negeri_sembilan;pahang;penang;perak;putrajaya;sabah;selangor;sarawak" />
+  </notableday>
+  <notableday name="Federal Territory Day" openday="false">
+	<month>2</month>
+	<day>1</day>
+	<localname value="Hari Wilayah" />
+	<region value="kuala_lumpur;labuan_territory;putrajaya" />
+  </notableday>
+  <notableday name="Anniversary of Installation of the Sultan of Terengganu" openday="false">
+	<month>3</month>
+	<day>4</day>
+	<localname value="Hari Ulang Tahun Pertabalan Sultan Terengganu" />
+	<region value="terengganu" />
+  </notableday>
+  <notableday name="Declaration of Malacca City as Historical City" openday="false">
+	<month>4</month>
+	<day>15</day>
+	<localname value="Perisytiharan Bandar Melaka sebagai Bandaraya Bersejarah" />
+	<region value="malacca" />
+  </notableday>
+  <notableday name="Labour day" openday="false">
+	<month>5</month>
+	<day>1</day>
+	<localname value="Hari Pekerja" />
+  </notableday>
+  <notableday name="Hari Hol of Pahang" openday="false">
+	<month>5</month>
+	<day>7</day>
+	<localname value="Hari Hol Pahang" />
+	<region value="pahang" />
+  </notableday>
+  <notableday name="Harvest Festival" openday="false">
+	<month>5</month>
+	<day>30</day>
+	<localname value="Pesta Menuai" />
+	<region value="labuan_territory;sabah" />
+  </notableday>
+  <notableday name="Gawai Dayak" openday="false">
+	<month>6</month>
+	<day>1</day>
+	<localname value="Gawai Dayak" />
+	<region value="sarawak" />
+  </notableday>
+  <notableday name="Gawai Dayak" openday="false">
+	<month>6</month>
+	<day>2</day>
+	<localname value="Gawai Dayak" />
+	<region value="sarawak" />
+  </notableday>
+	<notableday name="Malaysia King's Birthday" openday="false">
+	    <month>6</month>
+	    <weekday>saturday</weekday>
+	    <weekdaynumber>1</weekdaynumber>
+	    <localname value="Hari Keputeraan Yang di-Pertuan Agong" />
+	</notableday>
+  <notableday name="Declaration of George Town as World Heritage Site" openday="false">
+	<month>7</month>
+	<day>7</day>
+	<localname value="Perisytiharan George Town sebagai Tapak Warisan Dunia" />
+	<region value="penang" />
+  </notableday>
+  <notableday name="Merdeka Day" openday="false">
+	<month>8</month>
+	<day>31</day>
+	<localname value="Hari Kebangsaan" />
+  </notableday>
+  <notableday name="Malaysia Day" openday="false">
+	<month>9</month>
+	<day>16</day>
+	<localname value="Hari Malaysia" />
+  </notableday>
+  <notableday name="Hari Hol Sultan Johor" openday="false">
+	<month>11</month>
+	<day>29</day>
+	<localname value="Hari Hol Sultan Johor" />
+	<region value="johor" />
+  </notableday>
+  <notableday name="Christmas Day" openday="false">
+	<month>12</month>
+	<day>25</day>
+	<localname value="Hari Krismas" />
+  </notableday>
+  <notableday name="First day of Muharram" openday="false">
+    <calendar>hijri</calendar>
+    <month>1</month>
+    <day>1</day>
+    <localname value="Awal Muharram" />
+  </notableday>
+  <notableday name="Birthday of Prophet Muhammad" openday="false">
+    <calendar>hijri</calendar>
+    <month>3</month>
+    <day>12</day>
+    <localname value="Maulidur Rasul" />
+  </notableday>
+  <notableday name="Isra and Mi'raj" openday="false">
+    <calendar>hijri</calendar>
+    <month>7</month>
+    <day>27</day>
+    <localname value="Israk dan Mikraj" />
+	<region value="johor;penang;terengganu" />
+  </notableday>
+  <notableday name="First day of Ramadan" openday="false">
+    <calendar>hijri</calendar>
+    <month>9</month>
+    <day>1</day>
+    <localname value="Awal Ramadan" />
+	<region value="johor;kedah;malacca;terengganu" />
+  </notableday>
+  <notableday name="Day of Nuzul Al-Quran" openday="false">
+    <calendar>hijri</calendar>
+    <month>9</month>
+    <day>17</day>
+    <localname value="Nuzul Al-Quran" />
+	<region value="kelantan;kuala_lumpur;labuan_territory;malacca;negeri_sembilan;pahang;perlis;putrajaya;selangor;sarawak;terengganu" />
+  </notableday>
+  <notableday name="Hari Raya Puasa" openday="false">
+    <calendar>hijri</calendar>
+    <month>10</month>
+    <day>1</day>
+    <localname value="Hari Raya Aidilfitri" />
+  </notableday>
+  <notableday name="Hari Raya Puasa" openday="false">
+    <calendar>hijri</calendar>
+    <month>10</month>
+    <day>2</day>
+    <localname value="Hari Raya Aidilfitri" />
+  </notableday>
+  <notableday name="Hari Raya Qurban" openday="false">
+    <calendar>hijri</calendar>
+    <month>12</month>
+    <day>10</day>
+    <localname value="Hari Raya Aidiladha" />
+  </notableday>
+  <notableday name="Hari Raya Qurban" openday="false">
+    <calendar>hijri</calendar>
+    <month>12</month>
+    <day>11</day>
+    <localname value="Hari Raya Aidiladha" />
+	<region value="kelantan;terengganu" />
+  </notableday>
+  <notableday name="State Governor's Birthday" openday="false">
+  	<month>10</month>
+  	<weekday>saturday</weekday>
+  	<weekdaynumber>2</weekdaynumber>
+  	<localname value="Hari Jadi" />
+  	<region value="malacca" />
+  </notableday>
+  <notableday name="State Governor's Birthday" openday="false">
+  	<month>7</month>
+  	<weekday>saturday</weekday>
+  	<weekdaynumber>2</weekdaynumber>
+  	<localname value="Hari Jadi" />
+  	<region value="penang" />
+  </notableday>
+  <notableday name="State Governor's Birthday" openday="false">
+  	<month>10</month>
+  	<weekday>saturday</weekday>
+  	<weekdaynumber>1</weekdaynumber>
+  	<localname value="Hari Jadi" />
+  	<region value="sabah" />
+  </notableday>
+  <notableday name="State Governor's Birthday" openday="false">
+  	<month>9</month>
+  	<weekday>saturday</weekday>
+  	<weekdaynumber>2</weekdaynumber>
+  	<localname value="Hari Jadi" />
+  	<region value="sarawak" />
+  </notableday>
+  <notableday name="State Ruler's Birthday" openday="false">
+	<month>11</month>
+	<day>22</day>
+	<localname value="Hari Keputeraan" />
+	<region value="johor" />
+  </notableday>
+  <notableday name="State Ruler's Birthday" openday="false">
+	<month>1</month>
+	<day>19</day>
+	<localname value="Hari Keputeraan" />
+	<region value="kedah" />
+  </notableday>
+  <notableday name="State Ruler's Birthday" openday="false">
+	<month>11</month>
+	<day>11</day>
+	<localname value="Hari Keputeraan" />
+	<region value="kelantan" />
+  </notableday>
+  <notableday name="State Ruler's Birthday" openday="false">
+	<month>1</month>
+	<day>14</day>
+	<localname value="Hari Keputeraan" />
+	<region value="negeri_sembilan" />
+  </notableday>
+  <notableday name="State Ruler's Birthday" openday="false">
+	<month>10</month>
+	<day>24</day>
+	<localname value="Hari Keputeraan" />
+	<region value="pahang" />
+  </notableday>
+  <notableday name="State Ruler's Birthday" openday="false">
+	<month>4</month>
+	<day>19</day>
+	<localname value="Hari Keputeraan" />
+	<region value="perak" />
+  </notableday>
+  <notableday name="State Ruler's Birthday" openday="false">
+	<month>5</month>
+	<day>17</day>
+	<localname value="Hari Keputeraan" />
+	<region value="perlis" />
+  </notableday>
+  <notableday name="State Ruler's Birthday" openday="false">
+	<month>12</month>
+	<day>11</day>
+	<localname value="Hari Keputeraan" />
+	<region value="selangor" />
+  </notableday>
+  <notableday name="State Ruler's Birthday" openday="false">
+	<month>4</month>
+	<day>26</day>
+	<localname value="Hari Keputeraan" />
+	<region value="terengganu" />
+  </notableday>
+<notablesdays>

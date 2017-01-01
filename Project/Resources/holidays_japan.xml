@@ -1,0 +1,92 @@
+<notablesdays>
+     <notableday name="New year's day" openday="false">
+         <month>1</month>
+         <day>1</day>
+         <localname value="Ganjitsu" />
+     </notableday>
+     <notableday name="Majority accession" openday="false">
+         <weekdayinmonth>
+           <month>1</month>
+           <weekday>1</weekday>
+           <weekdaynum>2</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Seijin no Hi" />
+     </notableday>
+     <notableday name="State fundation birthday" openday="false">
+         <month>2</month>
+         <day>11</day>
+         <localname value="Kenkoku kinen no hi" />
+     </notableday>
+     <notableday name="Holiday of the harvests" openday="false">
+         <month>3</month>
+         <day>15</day>
+         <localname value="Honen Matsuri" />
+     </notableday>
+     <notableday name="spring" openday="false">
+         <spring />
+         <localname value="Shunbun no Hi" />
+     </notableday>
+     <notableday name="Emperer showa birthday" openday="false">
+         <month>4</month>
+         <day>29</day>
+         <localname value="Showa no Hi" />
+     </notableday>
+     <notableday name="Constitution commemoration" openday="false">
+         <month>5</month>
+         <day>3</day>
+         <localname value="Kenpo Kinen Bi" />
+     </notableday>
+     <notableday name="nature's day" openday="false">
+         <month>5</month>
+         <day>4</day>
+         <localname value="Midori no Hi" />
+     </notableday>
+     <notableday name="chidrens' day" openday="false">
+         <month>5</month>
+         <day>5</day>
+         <localname value="Kodomo no hi" />
+     </notableday>
+     <notableday name="sea's day" openday="false">
+         <weekdayinmonth>
+           <month>7</month>
+           <weekday>1</weekday>
+           <weekdaynum>3</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Umi no Hi" />
+     </notableday>
+     <notableday name="old person's day" openday="false">
+         <weekdayinmonth>
+           <month>9</month>
+           <weekday>1</weekday>
+           <weekdaynum>3</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Keiro no Hi" />
+     </notableday>
+     <notableday name="falls" openday="false">
+         <spring />
+         <localname value="Shubun no Hi" />
+     </notableday>
+     <notableday name="physical education's day" openday="false">
+         <weekdayinmonth>
+           <month>10</month>
+           <weekday>1</weekday>
+           <weekdaynum>2</weekdaynum>
+         </weekdayinmonth>
+         <localname value=" Taiiku no Hi" />
+     </notableday>
+     <notableday name="culture's day" openday="false">
+         <month>11</month>
+         <day>3</day>
+         <localname value="Bunka no Hi" />
+     </notableday>
+     <notableday name="labour's day" openday="false">
+         <month>11</month>
+         <day>23</day>
+         <localname value="Kinro Kansha no Hi" />
+     </notableday>
+     <notableday name="Emperer birthday" openday="false">
+         <month>12</month>
+         <day>23</day>
+         <localname value="Tenno Tanjobi" />
+     </notableday>
+</notablesdays>

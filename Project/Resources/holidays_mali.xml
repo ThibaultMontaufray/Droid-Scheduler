@@ -1,0 +1,37 @@
+<notablesdays>
+     <notableday name="New year's day" openday="false">
+         <month>1</month>
+         <day>1</day>
+         <localname value="Jour de l'an" />
+     </notableday>
+     <notableday name="Army's day" openday="false">
+         <month>1</month>
+         <day>20</day>
+         <localname value="Fête de l'armée" />
+     </notableday>
+     <notableday name="Martyr's day" openday="false">
+         <month>3</month>
+         <day>26</day>
+         <localname value="Journée des Martyrs" />
+     </notableday>
+     <notableday name="Labor's day" openday="false">
+         <month>5</month>
+         <day>1</day>
+         <localname value="Fête du travail" />
+     </notableday>  
+     <notableday name="Africa's day" openday="false">
+         <month>5</month>
+         <day>25</day>
+         <localname value="Fête de l'Afrique" />
+     </notableday>  
+     <notableday name="Independance's Day" openday="false">
+         <month>9</month>
+         <day>22</day>
+         <localname value="Jour de l'Indépendance" />
+     </notableday>  
+     <notableday name="Chrismas day" openday="false">
+         <month>12</month>
+         <day>25</day>
+         <localname value="Noel" />
+     </notableday>
+</notablesdays>

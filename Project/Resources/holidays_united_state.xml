@@ -1,0 +1,84 @@
+<notablesdays>
+     <notableday name="New year's day" openday="false">
+         <month>1</month>
+         <day>1</day>
+         <localname value="New year's day" />
+           <exceptions>
+                <day value="saturday" day="-1" />
+                <day value="sunday" day="1" />
+           </exceptions>
+     </notableday>
+     <notableday name="Chrismas day" openday="false">
+         <month>12</month>
+         <day>25</day>
+         <localname value="Chrismas day" />
+           <exceptions>
+                <day value="saturday" day="-1" />
+                <day value="sunday" day="1" />
+           </exceptions>
+     </notableday>
+     <notableday name="Columbus Day" openday="false">
+         <month>10</month>
+         <weekday>monday</weekday>
+         <weekdaynumber>2</weekdaynumber>
+         <localname value="Columbus Day" />
+     </notableday>
+     <notableday name="Independence Day" openday="false">
+         <month>7</month>
+         <day>4</day>
+         <localname value="Independence Day" />
+           <exceptions>
+                <day value="saturday" day="-1" />
+                <day value="sunday" day="1" />
+           </exceptions>
+     </notableday>  
+     <notableday name="Labour day" openday="false">
+         <weekdayinmonth>
+           <month>9</month>
+           <weekday>1</weekday>
+           <weekdaynum>1</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Labour day" />
+     </notableday>
+     <notableday name="Martin Luther King's Birthday" openday="false">
+         <weekdayinmonth>
+           <month>1</month>
+           <weekday>1</weekday>
+           <weekdaynum>3</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Martin Luther King's Birthday" />
+     </notableday>
+     <notableday name="Memorial Day" openday="false">
+         <weekdayinmonth>
+           <month>5</month>
+           <weekday>1</weekday>
+           <weekdaynum>-1</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Memorial Day" />
+     </notableday>
+     <notableday name="Thanksgiving" openday="false">
+         <weekdayinmonth>
+           <month>11</month>
+           <weekday>4</weekday>
+           <weekdaynum>4</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Thanksgiving" />
+     </notableday>
+     <notableday name="Veterans' Day" openday="false">
+         <month>11</month>
+         <day>11</day>
+         <localname value="Veterans' Day" />
+           <exceptions>
+                <day value="saturday" day="-1" />
+                <day value="sunday" day="1" />
+           </exceptions>
+     </notableday>
+     <notableday name="Washington's Birthday" openday="false">
+         <weekdayinmonth>
+           <month>2</month>
+           <weekday>1</weekday>
+           <weekdaynum>3</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Washington's Birthday" />
+     </notableday>
+</notablesdays>

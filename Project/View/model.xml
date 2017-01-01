@@ -1,0 +1,265 @@
+﻿<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+      <title>Scheduler</title>
+      <style>
+        * {
+        background:#000;
+        color:#999;
+        font-family:Calibri;
+        padding:0px;
+        margin:0px;
+        border:0px;
+        border-spacing: 0px;
+        }
+        .tableScheduler {
+        border-spacing: 1px;
+        background-color:#333;
+        }
+        .tableScheduler td {
+        position: relative;
+        float:top;
+        text-align:top;
+        padding:8px;
+        background-color:#111;
+        }
+        .tableScheduler select {
+        min-width:100px;
+        }
+        .tableScheduler input {
+        border:solid 1px #222;
+        padding-left:5px;
+        padding-right:10px;
+        }
+        .tableScheduler input:focus {
+        outline: none !important;
+        border-color: #CC9933;
+        box-shadow: 0 0 10px #CC9933;
+        }
+      </style>
+      <link rel="stylesheet" type="text/css" href="D:/DEV/_Assistant/Assistant/Droid_web/StyleCss/styleDropDown.css">
+</head>
+  <body>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="D:/DEV/_Assistant/Assistant/Droid_web/Scripts/ScriptDropDown.js"></script>
+
+    <center>
+      <form>
+        <table class="tableScheduler" style="margin-top:100px;">
+          <tr>
+            <td colspan="2">
+              <table>
+                <tr>
+                  <td>
+                    Configuration file
+                    <input type="text" name="calendarName" style="width:200px; margin-left:10px;">
+                      <input type="submit" value="Browse">
+                        <input type="submit" value="Create new">
+					</td>
+                  <td>
+                    Multi instance mode
+                    <div onchange="updateDropDown('multiinst');" class="dropp" id="region" style="width:220px;">
+                      <div class="dropp-header">
+                        <span class="dropp-header__title js-value-multiinst">Once</span>
+                        <a href="#" class="dropp-header__btn js-dropp-action">
+                          <i class="icon"></i>
+                        </a>
+                      </div>
+                      <div class="dropp-body">
+                        <label for="optOnce">
+                          [ONCE]       Don't launch program if already running<input type="radio" id="optOnce" name="dropp-multiinst" value="Once"/>
+                        </label>
+                        <label for="optMulti">
+                          [MULTI]      Launch program even if the previews still running<input type="radio" id="optMulti" name="dropp-multiinst" value="Multi"/>
+                        </label>
+                        <label for="optQueued">
+                          [QUEUED]   Waiting the end of the current program to launch it<input type="radio" id="optQueued" name="dropp-multiinst" value="Queued"/>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" value="Create new"> New job </input>
+                    <div onchange="updateDropDown('userjobs');" class="dropp" id="region" style="width:250px;margin-right:0px;">
+                      <div class="dropp-header">
+                        <span class="dropp-header__title js-value-userjobs">No user jobs in memory</span>
+                        <a href="#" class="dropp-header__btn js-dropp-action">
+                          <i class="icon"></i>
+                        </a>
+                      </div>
+                      <div class="dropp-body">
+                      </div>
+                    </div>
+                    <span style="background:transparent; float:right">Select your job</span>
+                  </td>
+                  <td>
+                    Error mode
+                    <div onchange="updateDropDown('errormod');" class="dropp" id="region" style="width:220px;">
+                      <div class="dropp-header">
+                        <span class="dropp-header__title js-value-errormod">No action</span>
+                        <a href="#" class="dropp-header__btn js-dropp-action">
+                          <i class="icon"></i>
+                        </a>
+                      </div>
+                      <div class="dropp-body">
+                        <label for="optErrModNoAction">
+                          No particular action when job failled<input type="radio" id="optErrModNoAction" name="dropp-errormod" value="No action"/>
+                        </label>
+                        <label for="optErrModOnce">
+                          If failled, relaunch once the job<input type="radio" id="optErrModOnce" name="dropp-errormod" value="Relaunch once"/>
+                        </label>
+                        <label for="optErrModOnce1">
+                          If failled wait 1 minute, and relaunch once the job<input type="radio" id="optErrModOnce1" name="dropp-errormod" value="Relaunch once after 1 min"/>
+                        </label>
+                        <label for="optErrModOnce5">
+                          If failled wait 5 minute, and relaunch once the job<input type="radio" id="optErrModOnce5" name="dropp-errormod" value="Relaunch once after 5 min"/>
+                        </label>
+                        <label for="optErrModOnce10">
+                          If failled wait 10 minute, and relaunch once the job<input type="radio" id="optErrModOnce10" name="dropp-errormod" value="Relaunch once after 10 min"/>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Program to launch
+                    <input type="text" name="programToLaucnh" style="width:275px; margin-left:10px;">
+                      <input type="submit" value="Browse">
+					</td>
+                  <td>
+                    Job name
+                    <input type="text" name="jobName"  style="width:200; margin-left:10px;">
+                      <input type="radio" name="periodtype" value="cyclic"> Cyclique </input>
+                      <input type="radio" name="periodtype" value="manual" checked=""> Manual </input>
+                    </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td>
+                    <input type="radio" name="calendartype" value="referencedcalendar" checked="">
+                      Referenced calendar
+
+                      <div onchange="updateDropDown('region');" class="dropp" id="region" style="width:200px;">
+                        <div class="dropp-header">
+                          <span class="dropp-header__title js-value-region">Choose a region</span>
+                          <a href="#" class="dropp-header__btn js-dropp-action">
+                            <i class="icon"></i>
+                          </a>
+                        </div>
+                        <div class="dropp-body">
+                          <label for="optReg1">
+                            Region 1<input type="radio" id="optReg1" name="dropp-region" value="my region 1"/>
+                          </label>
+                          <label for="optReg2">
+                            Region 2<input type="radio" id="optReg2" name="dropp-region" value="my region 2"/>
+                          </label>
+                        </div>
+                      </div>
+                      <div onchange="updateDropDown('country');" class="dropp" id="country" style="width:150px;">
+                        <div class="dropp-header">
+                          <span class="dropp-header__title js-value-country">Choose a country</span>
+                          <a href="#" class="dropp-header__btn js-dropp-action">
+                            <i class="icon"></i>
+                          </a>
+                        </div>
+                        <div class="dropp-body">
+                          <label for="optCanada">
+                            Canada<input type="radio" id="optCanada" name="dropp-country" value="Canada"/>
+                          </label>
+                          <label for="optFrance">
+                            France<input type="radio" id="optFrance" name="dropp-country" value="France"/>
+                          </label>
+                          <label for="optGermany">
+                            Germany<input type="radio" id="optGermany" name="dropp-country" value="Germany"/>
+                          </label>
+                          <label for="optGreatBritain">
+                            Great Britain<input type="radio" id="optGreatBritain" name="dropp-country" value="Great Britain"/>
+                          </label>
+                          <label for="optGuine">
+                            Guine<input type="radio" id="optGuine" name="dropp-country" value="Guine"/>
+                          </label>
+                          <label for="optIndia">
+                            India<input type="radio" id="optIndia" name="dropp-country" value="India"/>
+                          </label>
+                          <label for="optIreland">
+                            Ireland<input type="radio" id="optIreland" name="dropp-country" value="Ireland"/>
+                          </label>
+                          <label for="optJapan">
+                            Japan<input type="radio" id="optJapan" name="dropp-country" value="Japan"/>
+                          </label>
+                          <label for="optKenya">
+                            Kenya<input type="radio" id="optKenya" name="dropp-country" value="Kenya"/>
+                          </label>
+                          <label for="optMali">
+                            Mali<input type="radio" id="optMali" name="dropp-country" value="Mali"/>
+                          </label>
+                          <label for="optRepubliqueCentrafrique">
+                            Republique Centrafrique<input type="radio" id="optRepubliqueCentrafrique" name="dropp-country" value="Republique Centrafrique"/>
+                          </label>
+                          <label for="optRussia">
+                            Russia<input type="radio" id="optRussia" name="dropp-country" value="Russia"/>
+                          </label>
+                          <label for="optTogo">
+                            Togo<input type="radio" id="optTogo" name="dropp-country" value="Togo"/>
+                          </label>
+                          <label for="optUSA">
+                            USA<input type="radio" id="optUSA" name="dropp-country" value="USA"/>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="radio" name="calendartype" value="createcalendar"> Create calendar
+				</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="radio" name="calendartype" value="personalcalendar">
+                      Personal calendar
+                      <input type="text" name="calendarName" style="width:300px; margin-left:10px;">
+                        <input type="submit" value="Browse" style="margin-right:-7px;">
+				</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="radio" name="calendartype" value="nocalendarneeded"<"> No calendar needed
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td rowspan="2">list of execution</td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              start at <input type="date" name="startdate">
+                <input type="time" name="starttime">
+                  </br>
+                  maximum start window <input type="date" name="startmaxdate">
+                    <input type="time" name="startmaxtime">
+                      </br>
+                    </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" value="Calendar preview">
+                <input type="submit" value="Day preview">
+                  <input type="submit" value="Cancel">
+                    <input type="submit" value="Apply">
+			</td>
+          </tr>
+        </table>
+      </form>
+    </center>
+  </body>
+</html>

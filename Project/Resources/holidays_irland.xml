@@ -1,0 +1,63 @@
+<notablesdays>
+     <notableday name="Easter">
+         <Easter />
+     </notableday>
+     <notableday name="New year's day" openday="false">
+         <month>1</month>
+         <day>1</day>
+         <localname value="Lá Caille" />
+     </notableday>
+     <notableday name="Saint Patrick's Day" openday="false">
+         <month>3</month>
+         <day>17</day>
+         <localname value="Lá Fhéile Pádraig" />
+     </notableday>
+     <notableday name="Easter Monday" openday="false">
+         <daysafterholiday holiday="Easter">
+             <days>1</days>
+         </daysafterholiday>
+         <localname value="Luan Cásca" />
+     </notableday>
+     <notableday name="Labour's day" openday="false">
+         <weekdayinmonth>
+           <month>5</month>
+           <weekday>1</weekday>
+           <weekdaynum>1</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Lá an Lucht Oibre" />
+     </notableday>
+     <notableday name="June Holiday" openday="false">
+         <weekdayinmonth>
+           <month>6</month>
+           <weekday>1</weekday>
+           <weekdaynum>1</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Lá Saoire i mí Mheitheamh" />
+     </notableday>
+     <notableday name="August Holiday" openday="false">
+         <weekdayinmonth>
+           <month>8</month>
+           <weekday>1</weekday>
+           <weekdaynum>1</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Lá Saoire i mí Lúnasa" />
+     </notableday>
+     <notableday name="October Holiday" openday="false">
+         <weekdayinmonth>
+           <month>10</month>
+           <weekday>1</weekday>
+           <weekdaynum>-1</weekdaynum>
+         </weekdayinmonth>
+         <localname value="Lá Saoire i mí Dheireadh Fómhair" />
+     </notableday>
+     <notableday name="Chrismas day" openday="false">
+         <month>12</month>
+         <day>25</day>
+         <localname value="Lá Nollag" />
+     </notableday>  
+     <notableday name="Boxing Day" openday="false">
+         <month>12</month>
+         <day>26</day>
+         <localname value="Lá Fhéile Stiofáin" />
+     </notableday>  
+</notablesdays>
