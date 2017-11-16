@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8CD1E957-1DD4-46D3-A549-FF5837F3A658}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Droid_scheduler</RootNamespace>
     <AssemblyName>Droid_scheduler</AssemblyName>
@@ -45,22 +45,10 @@
       <HintPath>packages\Droid_Database.1.0.4\lib\4.0\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Droid_database, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Droid_Database.1.0.4\lib\4.0\Droid_database.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>packages\Droid_Database.1.0.4\lib\4.0\MySql.Data.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="mysql.data.entity.EF6, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\Droid_Database.1.0.4\lib\4.0\mysql.data.entity.EF6.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="NDbUnit.Core, Version=1.6.8.36615, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Droid_Database.1.0.4\lib\4.0\NDbUnit.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NDbUnit.SqlServerCe, Version=1.6.8.36615, Culture=neutral, processorArchitecture=MSIL">
@@ -70,21 +58,16 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>packages\Droid_Database.1.0.4\lib\4.0\System.Data.SqlServerCe.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.Ribbon, Version=3.5.8.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\officeribbon.3.5.8.4\lib\net20\System.Windows.Forms.Ribbon.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tools4Libraries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Tools4Libraries.1.0.10\lib\4.0\Tools4Libraries.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
@@ -93,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controler\CalendarConvert.cs" />
+    <Compile Include="Controler\GetText.cs" />
     <Compile Include="Controler\HolidayCalculator.cs" />
     <Compile Include="Controler\Manager.cs" />
     <Compile Include="Controler\Scheduler.cs" />
@@ -101,6 +85,21 @@
     <Compile Include="Model\Holiday.cs" />
     <Compile Include="Model\Job.cs" />
     <Compile Include="Model\Launcher.cs" />
+    <Compile Include="Properties\ResourceEnglish.Designer.cs">
+      <DependentUpon>ResourceEnglish.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\ResourceFrench.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceFrench.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
     <Compile Include="Service\ProjectInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -131,8 +130,8 @@
     <Compile Include="View\GUI.Designer.cs">
       <DependentUpon>GUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface_sheduler.cs" />
-    <Compile Include="PanelScheduler.cs">
+    <Compile Include="Controler\Interface_sheduler.cs" />
+    <Compile Include="View\PanelScheduler.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controler\Program.cs" />
@@ -155,9 +154,20 @@
     <Compile Include="View\TaskSetting.Designer.cs">
       <DependentUpon>TaskSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ToolStripMenuSCH.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PanelScheduler.resx">
+    <EmbeddedResource Include="Properties\ResourceEnglish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceEnglish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\ResourceFrench.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceFrench.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PanelScheduler.resx">
       <DependentUpon>PanelScheduler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Service\TS_Scheduler.resx">
@@ -187,6 +197,10 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\holidays_bolivia.xml" />
     <None Include="Resources\holidays_canada.xml" />
     <None Include="Resources\holidays_china.xml" />
@@ -210,6 +224,16 @@
     <Content Include="View\model.xml">
       <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Droid-Database\Project\Droid_Database.csproj">
+      <Project>{d2c821f1-1ce1-4b0b-b87a-d59b0ae062a0}</Project>
+      <Name>Droid_Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tools4Libraries\Tools4Libraries.csproj">
+      <Project>{aad2b1be-9b2d-455d-8dd4-64e4e84dd985}</Project>
+      <Name>Tools4Libraries</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
