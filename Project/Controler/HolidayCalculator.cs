@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Xml;
 
-namespace Droid_scheduler
+namespace Droid.scheduler
 {
     public class HolidayCalculator : ICloneable
     {

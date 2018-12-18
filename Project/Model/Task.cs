@@ -1,8 +1,10 @@
-﻿namespace Droid_scheduler
+﻿namespace Droid.scheduler
 {
     using System;
     using System.Collections.Generic;
-    using Droid_Database;
+    using Droid.Database;
+    using System.Data;
+    using System.Configuration;
 
     public class Task
     {
@@ -311,17 +313,17 @@
         public static bool Exist(Task task)
         {
             if (task.ID == "-1") return false;
-            List<string[]> ret = MySqlAdapter.ExecuteReader("select id from s_task where id = " + task.ID);
-            return ret.Count > 0;
+            DataTable ret = DBAdapter.ExecuteReader(ConfigurationManager.AppSettings["DB_NAME"].ToString(), "select id from s_task where id = " + task.ID);
+            return ret.Rows.Count > 0;
         }
         public static List<string[]> GetListTask()
         {
             List<string[]> dico = new List<string[]>();
             string query = string.Format(@"SELECT id, name FROM s_task;");
 
-            List<string[]> ret = MySqlAdapter.ExecuteReader(query);
+            DataTable ret = DBAdapter.ExecuteReader(ConfigurationManager.AppSettings["DB_NAME"].ToString(), query);
 
-            foreach (string[] row in ret)
+            foreach (string[] row in ret.Rows)
             {
                 if (row.Length > 1)
                 {
@@ -339,12 +341,12 @@
             List<Task> tasks = new List<Task>();
             string query = string.Format(@"SELECT name FROM s_task;");
 
-            List<string[]> ret = MySqlAdapter.ExecuteReader(query);
+            DataTable ret = DBAdapter.ExecuteReader(ConfigurationManager.AppSettings["DB_NAME"].ToString(), query);
             Task t;
-            foreach (var result in ret)
+            foreach (DataRow result in ret.Rows)
             {
                 t = new Task();
-                t.Load(result[0]);
+                t.Load(result.ItemArray[0].ToString());
                 tasks.Add(t);
             }
             return tasks;
@@ -420,7 +422,7 @@
             DateTime.Now.Ticks.ToString(), _name, _cyclic, _programPath, _startDate, _maxStartDate, _calendarPath, _calendarCountry, _runMonday, _runThuesday, _runWednesday, _runThursday, _runFriday,
             _runSaturday, _runSunday, _executeOnDelay, _runSecond, _runMinute, _runHour, _executeInterval, _executeIntervalTimeUnit, _errorMode, _multiInstanceMode, _maxRunSecond, _maxRunMinute, _maxRunHour, _noMaxStartDate, DumpJobs());
 
-            MySqlAdapter.ExecuteQuery(query);
+            MySqlAdapter.ExecuteQuery(ConfigurationManager.AppSettings["DB_NAME"].ToString(), query);
         }
         public void Update()
         {
@@ -428,7 +430,7 @@
             _name, _cyclic, _programPath, _startDate, _maxStartDate, _calendarPath, _calendarCountry, _runMonday, _runThuesday, _runWednesday, _runThursday, _runFriday,
             _runSaturday, _runSunday, _executeOnDelay, _runSecond, _runMinute, _runHour, _executeInterval, _executeIntervalTimeUnit, _errorMode, _multiInstanceMode);
 
-            MySqlAdapter.ExecuteQuery(query);
+            MySqlAdapter.ExecuteQuery(ConfigurationManager.AppSettings["DB_NAME"].ToString(), query);
         }
         public void Load(string name)
         {
@@ -437,37 +439,37 @@
             runOnSecond, runOnMinute, runOnHour, maxRunOnSecond, maxRunOnMinute, maxRunOnHour, maxRunSecond, maxRunMinute, maxRunHour, noMaxStartDate, manualJobs
             FROM s_task where name = '{0}';", name);
 
-            List<string[]> ret = MySqlAdapter.ExecuteReader(query);
-            if (ret.Count > 0)
+            DataTable ret = DBAdapter.ExecuteReader(ConfigurationManager.AppSettings["DB_NAME"].ToString(), query);
+            if (ret.Rows.Count > 0)
             {
-                _id = ret[0][0];
-                _name = ret[0][1];
-                _cyclic = ret[0][2] == "1";
-                _programPath = ret[0][3];
-                _startDate = DateTime.Parse(ret[0][4]);
-                _maxStartDate = DateTime.Parse(ret[0][5]);
-                _calendarPath = ret[0][6];
-                _calendarCountry = ret[0][7];
-                _runMonday = ret[0][8] == "1";
-                _runThuesday = ret[0][9] == "1";
-                _runWednesday = ret[0][10] == "1";
-                _runThursday = ret[0][11] == "1";
-                _runFriday = ret[0][12] == "1";
-                _runSaturday = ret[0][13] == "1";
-                _runSunday = ret[0][14] == "1";
-                _executeOnDelay = ret[0][15] == "1";
-                _runSecond = int.Parse(ret[0][16]);
-                _runMinute = int.Parse(ret[0][17]);
-                _runHour = int.Parse(ret[0][18]);
-                _executeInterval = int.Parse(ret[0][19]);
-                _executeIntervalTimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), ret[0][20]);
-                if (!string.IsNullOrEmpty(ret[0][21])) _errorMode = (ErrorMode)Enum.Parse(typeof(ErrorMode), ret[0][21]);
-                if (!string.IsNullOrEmpty(ret[0][22])) _multiInstanceMode = (MultiInstanceMode)Enum.Parse(typeof(MultiInstanceMode), ret[0][22]);
-                _maxRunSecond = int.Parse(ret[0][30]);
-                _maxRunMinute = int.Parse(ret[0][31]);
-                _maxRunHour = int.Parse(ret[0][32]);
-                _noMaxStartDate = ret[0][33] == "1";
-                ParseJob(ret[0][34].ToString());
+                _id = ret.Rows[0].ItemArray[0].ToString();
+                _name = ret.Rows[0].ItemArray[1].ToString();
+                _cyclic = ret.Rows[0].ItemArray[2].ToString() == "1";
+                _programPath = ret.Rows[0].ItemArray[3].ToString();
+                _startDate = DateTime.Parse(ret.Rows[0].ItemArray[4].ToString());
+                _maxStartDate = DateTime.Parse(ret.Rows[0].ItemArray[5].ToString());
+                _calendarPath = ret.Rows[0].ItemArray[6].ToString();
+                _calendarCountry = ret.Rows[0].ItemArray[7].ToString();
+                _runMonday = ret.Rows[0].ItemArray[8].ToString() == "1";
+                _runThuesday = ret.Rows[0].ItemArray[9].ToString() == "1";
+                _runWednesday = ret.Rows[0].ItemArray[10].ToString() == "1";
+                _runThursday = ret.Rows[0].ItemArray[11].ToString() == "1";
+                _runFriday = ret.Rows[0].ItemArray[12].ToString() == "1";
+                _runSaturday = ret.Rows[0].ItemArray[13].ToString() == "1";
+                _runSunday = ret.Rows[0].ItemArray[14].ToString() == "1";
+                _executeOnDelay = ret.Rows[0].ItemArray[15].ToString() == "1";
+                _runSecond = int.Parse(ret.Rows[0].ItemArray[16].ToString());
+                _runMinute = int.Parse(ret.Rows[0].ItemArray[17].ToString());
+                _runHour = int.Parse(ret.Rows[0].ItemArray[18].ToString());
+                _executeInterval = int.Parse(ret.Rows[0].ItemArray[19].ToString());
+                _executeIntervalTimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), ret.Rows[0].ItemArray[20].ToString());
+                if (!string.IsNullOrEmpty(ret.Rows[0].ItemArray[21].ToString())) _errorMode = (ErrorMode)Enum.Parse(typeof(ErrorMode), ret.Rows[0].ItemArray[21].ToString());
+                if (!string.IsNullOrEmpty(ret.Rows[0].ItemArray[22].ToString())) _multiInstanceMode = (MultiInstanceMode)Enum.Parse(typeof(MultiInstanceMode), ret.Rows[0].ItemArray[22].ToString());
+                _maxRunSecond = int.Parse(ret.Rows[0].ItemArray[30].ToString());
+                _maxRunMinute = int.Parse(ret.Rows[0].ItemArray[31].ToString());
+                _maxRunHour = int.Parse(ret.Rows[0].ItemArray[32].ToString());
+                _noMaxStartDate = ret.Rows[0].ItemArray[33].ToString() == "1";
+                ParseJob(ret.Rows[0].ItemArray[34].ToString());
             }
         }
         public void AddManualExecution(string dump)

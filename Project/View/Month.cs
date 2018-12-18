@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Droid_scheduler
+namespace Droid.scheduler
 {
     public partial class Month : UserControl
     {
@@ -70,10 +70,10 @@ namespace Droid_scheduler
         {
             _specificDates = new List<DateTime>();
             _type = CalendarType.JULIAN;
-            //_nonWorkingDays = new HolidayCalculator(new DateTime(DateTime.Now.Year, 1, 1), Droid_scheduler.Properties.Resources.holidays_france);
+            //_nonWorkingDays = new HolidayCalculator(new DateTime(DateTime.Now.Year, 1, 1), Droid.scheduler.Properties.Resources.holidays_france);
             _nonWorkingDays = new HolidayCalculator();
             InitializeComponent();
-            _name = Droid_scheduler.Calendar.MonthNameInJulianCalendar(DateTime.Now);
+            _name = Droid.scheduler.Calendar.MonthNameInJulianCalendar(DateTime.Now);
 
             Init();
             LoadDays();
@@ -210,7 +210,7 @@ namespace Droid_scheduler
                 }
                 _dataGridViewCalendar.Rows[_dataGridViewCalendar.Rows.Count - 1].Cells[cellNum].Value = i;
                 _dataGridViewCalendar.Rows[_dataGridViewCalendar.Rows.Count - 1].Cells[cellNum].Style.SelectionForeColor = Color.Black;
-                switch (Droid_scheduler.Calendar.IsOpenDay(_nonWorkingDays, new DateTime(dt.Year, dt.Month, i)))
+                switch (Droid.scheduler.Calendar.IsOpenDay(_nonWorkingDays, new DateTime(dt.Year, dt.Month, i)))
                 {
                     case 0 :
                         _dataGridViewCalendar.Rows[_dataGridViewCalendar.Rows.Count - 1].Cells[cellNum].Style.BackColor = Color.WhiteSmoke;

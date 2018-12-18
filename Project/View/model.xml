@@ -38,11 +38,11 @@
         box-shadow: 0 0 10px #CC9933;
         }
       </style>
-      <link rel="stylesheet" type="text/css" href="D:/DEV/_Assistant/Assistant/Droid_web/StyleCss/styleDropDown.css">
+      <link rel="stylesheet" type="text/css" href="D:/DEV/_Assistant/Assistant/Droid.Web/StyleCss/styleDropDown.css">
 </head>
   <body>
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="D:/DEV/_Assistant/Assistant/Droid_web/Scripts/ScriptDropDown.js"></script>
+    <script src="D:/DEV/_Assistant/Assistant/Droid.Web/Scripts/ScriptDropDown.js"></script>
 
     <center>
       <form>

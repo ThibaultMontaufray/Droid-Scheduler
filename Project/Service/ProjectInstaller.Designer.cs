@@ -1,4 +1,4 @@
-﻿namespace Droid_scheduler
+﻿namespace Droid.scheduler
 {
     partial class ProjectInstaller
     {

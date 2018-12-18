@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Droid_scheduler
+namespace Droid.scheduler
 {
     public delegate void DayViewEventHandler(DayView dv, DateTime dt);
     public partial class DayView : UserControl

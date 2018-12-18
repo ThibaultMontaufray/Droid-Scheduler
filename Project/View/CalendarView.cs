@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Droid_scheduler
+namespace Droid.scheduler
 {
     public partial class CalendarView : UserControl
     {

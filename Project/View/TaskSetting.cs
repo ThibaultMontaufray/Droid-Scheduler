@@ -1,6 +1,6 @@
-﻿namespace Droid_scheduler
+﻿namespace Droid.scheduler
 {
-    using Droid_Database;
+    using Droid.Database;
     using System;
     using System.Collections.Generic;
     using System.Drawing;

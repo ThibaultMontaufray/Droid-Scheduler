@@ -1,6 +1,7 @@
-﻿namespace Droid_scheduler
+﻿namespace Droid.scheduler
 {
     using System;
+    using System.ComponentModel;
     using System.Windows.Forms;
     using Tools4Libraries;
 
@@ -11,6 +12,7 @@
     {
         #region Attributes
         private new ToolStripMenuSCH _tsm;
+        private ViewScheduler _viewScheduler;
         #endregion
 
         #region Properties
@@ -29,6 +31,7 @@
         #endregion
 
         #region Methods public
+        [Description("french[afficher.calendrier(pays)];english[display.calendar(country)]")]
         public static void ACTION_130_afficher_calendrier(string pays)
         {
             Window formCalendar = new Window();
@@ -64,6 +67,8 @@
         {
             switch (action)
             {
+                case "Home":
+                    break;
                 default:
                     break;
             }
@@ -80,6 +85,12 @@
         private void Init()
         {
             BuildToolBar();
+            LaunchWelcome();
+        }
+        private void LaunchWelcome()
+        {
+            if (_viewScheduler == null) { _viewScheduler = new ViewScheduler(); }
+            LaunchSheet(_viewScheduler);
         }
         #endregion
 

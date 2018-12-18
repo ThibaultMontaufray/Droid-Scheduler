@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using Tools4Libraries;
 
-namespace Droid_scheduler
+namespace Droid.scheduler
 {
     public class ToolStripMenuSCH : RibbonTab
     {

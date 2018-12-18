@@ -1,4 +1,4 @@
-﻿namespace Droid_scheduler.Controler
+﻿namespace Droid.scheduler.Controler
 {
     using System.Collections.Generic;
     using System.IO;

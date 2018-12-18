@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Droid_scheduler
+namespace Droid.scheduler
 {
     public class Holiday
     {

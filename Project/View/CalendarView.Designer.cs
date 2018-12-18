@@ -1,4 +1,4 @@
-﻿namespace Droid_scheduler
+﻿namespace Droid.scheduler
 {
     partial class CalendarView
     {
@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._month9 = new Droid_scheduler.Month();
-            this._month10 = new Droid_scheduler.Month();
-            this._month11 = new Droid_scheduler.Month();
-            this._month12 = new Droid_scheduler.Month();
-            this._month5 = new Droid_scheduler.Month();
-            this._month6 = new Droid_scheduler.Month();
-            this._month7 = new Droid_scheduler.Month();
-            this._month8 = new Droid_scheduler.Month();
-            this._month4 = new Droid_scheduler.Month();
-            this._month3 = new Droid_scheduler.Month();
-            this._month2 = new Droid_scheduler.Month();
-            this._month1 = new Droid_scheduler.Month();
+            this._month9 = new Droid.scheduler.Month();
+            this._month10 = new Droid.scheduler.Month();
+            this._month11 = new Droid.scheduler.Month();
+            this._month12 = new Droid.scheduler.Month();
+            this._month5 = new Droid.scheduler.Month();
+            this._month6 = new Droid.scheduler.Month();
+            this._month7 = new Droid.scheduler.Month();
+            this._month8 = new Droid.scheduler.Month();
+            this._month4 = new Droid.scheduler.Month();
+            this._month3 = new Droid.scheduler.Month();
+            this._month2 = new Droid.scheduler.Month();
+            this._month1 = new Droid.scheduler.Month();
             // 
             // month9
             // 
@@ -49,7 +49,7 @@
             this._month9.Name = "month9";
             this._month9.Size = new System.Drawing.Size(150, 171);
             this._month9.TabIndex = 11;
-            this._month9.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month9.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // month10
             // 
@@ -59,7 +59,7 @@
             this._month10.Name = "month10";
             this._month10.Size = new System.Drawing.Size(150, 171);
             this._month10.TabIndex = 10;
-            this._month10.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month10.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // month11
             // 
@@ -69,7 +69,7 @@
             this._month11.Name = "month11";
             this._month11.Size = new System.Drawing.Size(150, 171);
             this._month11.TabIndex = 9;
-            this._month11.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month11.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // month12
             // 
@@ -79,7 +79,7 @@
             this._month12.Name = "month12";
             this._month12.Size = new System.Drawing.Size(150, 171);
             this._month12.TabIndex = 8;
-            this._month12.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month12.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // month5
             // 
@@ -89,7 +89,7 @@
             this._month5.Name = "month5";
             this._month5.Size = new System.Drawing.Size(150, 171);
             this._month5.TabIndex = 7;
-            this._month5.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month5.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // month6
             // 
@@ -99,7 +99,7 @@
             this._month6.Name = "month6";
             this._month6.Size = new System.Drawing.Size(150, 171);
             this._month6.TabIndex = 6;
-            this._month6.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month6.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // month7
             // 
@@ -109,7 +109,7 @@
             this._month7.Name = "month7";
             this._month7.Size = new System.Drawing.Size(150, 171);
             this._month7.TabIndex = 5;
-            this._month7.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month7.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // month8
             // 
@@ -119,7 +119,7 @@
             this._month8.Name = "month8";
             this._month8.Size = new System.Drawing.Size(150, 171);
             this._month8.TabIndex = 4;
-            this._month8.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month8.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // month4
             // 
@@ -129,7 +129,7 @@
             this._month4.Name = "month4";
             this._month4.Size = new System.Drawing.Size(150, 171);
             this._month4.TabIndex = 3;
-            this._month4.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month4.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // month3
             // 
@@ -139,7 +139,7 @@
             this._month3.Name = "month3";
             this._month3.Size = new System.Drawing.Size(150, 171);
             this._month3.TabIndex = 2;
-            this._month3.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month3.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // month2
             // 
@@ -149,7 +149,7 @@
             this._month2.Name = "month2";
             this._month2.Size = new System.Drawing.Size(150, 171);
             this._month2.TabIndex = 1;
-            this._month2.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month2.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // month1
             // 
@@ -159,7 +159,7 @@
             this._month1.Name = "month1";
             this._month1.Size = new System.Drawing.Size(150, 171);
             this._month1.TabIndex = 0;
-            this._month1.Type = Droid_scheduler.Month.CalendarType.JULIAN;
+            this._month1.Type = Droid.scheduler.Month.CalendarType.JULIAN;
             // 
             // CalendarView
             // 
