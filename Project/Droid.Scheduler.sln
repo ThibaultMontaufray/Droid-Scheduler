@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Droid.Scheduler.UI", "Droid.Scheduler.UI\Droid.Scheduler.UI.csproj", "{8CD1E957-1DD4-46D3-A549-FF5837F3A658}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{09C5EB42-1D07-4EF1-B1FF-52842186515D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Droid.Scheduler", "Droid.Scheduler\Droid.Scheduler.csproj", "{592180B7-B12E-4E5E-BE57-232D2FA563FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CD1E957-1DD4-46D3-A549-FF5837F3A658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD1E957-1DD4-46D3-A549-FF5837F3A658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD1E957-1DD4-46D3-A549-FF5837F3A658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD1E957-1DD4-46D3-A549-FF5837F3A658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09C5EB42-1D07-4EF1-B1FF-52842186515D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C5EB42-1D07-4EF1-B1FF-52842186515D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C5EB42-1D07-4EF1-B1FF-52842186515D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C5EB42-1D07-4EF1-B1FF-52842186515D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{592180B7-B12E-4E5E-BE57-232D2FA563FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{592180B7-B12E-4E5E-BE57-232D2FA563FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{592180B7-B12E-4E5E-BE57-232D2FA563FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{592180B7-B12E-4E5E-BE57-232D2FA563FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13F68C06-B7D9-4FCA-9307-06F73FBCA74A}
+	EndGlobalSection
+EndGlobal

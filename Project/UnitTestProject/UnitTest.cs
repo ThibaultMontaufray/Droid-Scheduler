@@ -1,4 +1,4 @@
-using Droid.scheduler;
+using Droid.Scheduler;
 using NUnit.Framework;
 
 namespace UnitTestProject
