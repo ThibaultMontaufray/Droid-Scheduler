@@ -1,0 +1,43 @@
+.brainTitle {
+    color: #DDD;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+}
+table.brain-element, tr.brain-element, td, th {
+    width: 100%;
+    border: 20px solid #373737;
+    min-width: 200px;
+    min-height: 100px;
+    background-color: #555;
+    padding: 5px;
+}
+table.brain-element {
+    table-layout: fixed;
+}
+table.brain-detail, tr.brain-detail, td.brain-detail, th.brain-detail {
+    border: 1px solid black;
+    background-color: #555;
+    padding: 2px;
+}
+table.brain-detail {
+    width: 100%;
+    table-layout: fixed;
+}
+#graph{
+    background-color:transparent;
+    height: 500px;
+}
+.brain-filter-element{
+    display:inline-block;
+    position:relative;
+    width:300px;
+    margin:3px;
+    padding:3px;
+}
+.brain-filter-element-label {
+    min-width:100px;
+}
+.brain-filter-element-input {
+    background-color: #DDD;
+}

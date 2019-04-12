@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas></div>
+<main class="section-layout tab-content">
+    <section class="tab-pane in active animated slideInDown" id="home">
+        <div class="home-layout">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-offset-1 col-lg-10 col-xs-12">
+                        <div class="home-border">
+                            <div class="heading-home">
+                                @if (SignInManager.IsSignedIn(User))
+                                {
+                                <form asp-controller="Account" asp-action="Logout" method="post">
+                                    <button type="submit" class="indexLink"><h2><span>D</span>roid<span>S</span>cheduler</h2></button>
+                                    <p>Bienvenue @UserManager.GetUserName(User)!</p>
+                                    @Html.ActionLink("Entrer dans le scheduler", "Dashboard", "Server", null, new { @class = "indexLinkPage" })
+
+                                    @*<div asp-validation-summary="All" class="text-danger"></div>*@
+                                    
+                                </form>
+                                }
+                                else
+                                {
+                                    <h2><span>D</span>roid<span><a class="indexLink" asp-area="" asp-controller="Account" asp-action="Login">S</a></span>cheduler</h2>
+                                    <p>Under construction for open source !</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

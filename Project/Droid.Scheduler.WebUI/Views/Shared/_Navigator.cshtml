@@ -1,0 +1,99 @@
+﻿
+<nav class="navbar navbar-pf-vertical">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+</nav>
+<div class="nav-pf-vertical nav-pf-vertical-with-sub-menus nav-pf-persistent-secondary">
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="javascript:pagecalled('menu.dashboard');">
+                <span class="material-icons">dashboard</span>
+                <span class="list-group-item-value">Dashboard</span>
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="javascript:pagecalled('menu.scheduler');">
+                <span class="material-icons">access_alarm</span>
+                <span class="list-group-item-value">Scheduler</span>
+            </a>
+        </li>
+        @*<li class="list-group-item secondary-nav-item-pf active" data-target="#french-secondary">*@
+        <li class="list-group-item secondary-nav-item-pf" data-target="#french-secondary">
+            <a href="#">
+                <span class="material-icons">pages</span>
+                <span class="list-group-item-value">Jobs</span>
+            </a>
+            <div id="-secondary" class="nav-pf-secondary-nav">
+                <div class="nav-item-pf-header">
+                    <a class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
+                    <span>Jobs</span>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item active" data-target="#ipsum-intellegam-tertiary">
+                        <a href="javascript:pagecalled('menu.jobs', 'inject.citation');">
+                            <span class="material-icons">center_focus_strong</span>
+                            <span class="list-group-item-value">inject.citation</span>
+                        </a>
+                    </li>
+                    <li class="list-group-item " data-target="#ipsum-copiosae-tertiary">
+                        <a href="javascript:pagecalled('menu.jobs', 'inject.cuisine');">
+                            <span class="material-icons">center_focus_strong</span>
+                            <span class="list-group-item-value">inject.cuisine</span>
+                        </a>
+                    </li>
+                    <li class="list-group-item " data-target="#ipsum-patrioque-tertiary">
+                        <a href="javascript:pagecalled('menu.jobs', 'inject.information');">
+                            <span class="material-icons">center_focus_strong</span>
+                            <span class="list-group-item-value">inject.information</span>
+                        </a>
+                    </li>
+                    <li class="list-group-item " data-target="#ipsum-patrioque-tertiary">
+                        <a href="javascript:pagecalled('menu.jobs', 'inject.meteo');">
+                            <span class="material-icons">center_focus_strong</span>
+                            <span class="list-group-item-value">inject.meteo</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <a href="javascript:pagecalled('menu.english');">
+                <span class="material-icons">pages</span>
+                <span class="list-group-item-value">Settings</span>
+            </a>
+        </li>
+
+        <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block">
+            <a href="#">
+                <span class="material-icons">center_focus_strong</span>
+                <span class="list-group-item-value dropdown-title">User</span>
+            </a>
+            <div id="user-secondary" class="nav-pf-secondary-nav">
+                <div class="nav-item-pf-header">
+                    <a href="#" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
+                    <span>User</span>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="#">
+                            <span class="material-icons">center_focus_strong</span>
+                            <span class="list-group-item-value">Preferences</span>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <span class="material-icons">center_focus_strong</span>
+                            <span class="list-group-item-value">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>

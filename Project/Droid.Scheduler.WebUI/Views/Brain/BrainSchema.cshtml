@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Brain";
+}
+
+@Html.Partial("_Navigator")
+<div class="main-content">
+    <h2>Brain</h2>
+    <div>
+        <input class="form-control" type="url" value="http://localhost:7474" id="neo4jUrl" /><br />
+        <input class="form-control" type="text" size="8" value="neo4j" id="neo4jUser" />
+        <input class="form-control" type="password" size="8" placeholder="password" value="Graph" id="neo4jPass" /><br />
+        <textarea name="cypher" id="cypher" rows="4" cols="120" data-lang="cypher" class="code form-control">
+        MATCH (n)-[r]->(m)
+        RETURN n,r,m
+        LIMIT 50;
+        </textarea>
+        <a href="#" title="Execute" id="execute"><i class="material-icons" style="margin:15px;">play_circle_filled</i></a>
+    </div>
+    <div role="tabpanel" id="graph" style="height:80%;">
+        <div class="tab-pane active" id="graph">&nbsp;</div>
+    </div>
+</div>
