@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Droid.Scheduler.WebUI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Droid.Scheduler.WebUI.Authentication
 {
@@ -7,11 +8,14 @@ namespace Droid.Scheduler.WebUI.Authentication
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseNpgsql("Server=localhost;database=droid.scheduler;user id=droidscheduler;password=droid");
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;database=droid.scheduler;user id=droidscheduler;password=droid");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("ppartobid01");
+            modelBuilder.HasDefaultSchema("public");
         }
+
+        public DbSet<Job> Job { get; set; }
+        public DbSet<Running> Running { get; set; }
     }
 }

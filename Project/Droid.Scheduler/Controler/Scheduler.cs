@@ -1,4 +1,4 @@
-﻿namespace Droid.Scheduler
+﻿namespace Droid.Scheduler.Core
 {
     using System;
     using System.Collections.Generic;

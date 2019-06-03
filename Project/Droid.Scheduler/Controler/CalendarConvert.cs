@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Data;
 using System.Collections;
 
-namespace Droid.Scheduler
+namespace Droid.Scheduler.Core
 {
     /// <summary>
     /// Summary description for Dates.

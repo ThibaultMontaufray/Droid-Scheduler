@@ -1,4 +1,4 @@
-﻿namespace Droid.Scheduler
+﻿namespace Droid.Scheduler.Core
 {
     using System;
     using System.Collections.Generic;
@@ -6,7 +6,7 @@
     using System.Data;
     using System.Configuration;
 
-    public class Task
+    public class Box
     {
         #region Enum
         public enum CalendarType
@@ -296,7 +296,7 @@
         #endregion
 
         #region Constructor
-        public Task()
+        public Box()
         {
             Random r = new Random();
             _calendarType = CalendarType.REFERENCED;
@@ -310,7 +310,7 @@
         #endregion
 
         #region Methods public
-        public static bool Exist(Task task)
+        public static bool Exist(Box task)
         {
             if (task.ID == "-1") return false;
             DataTable ret = DBAdapter.ExecuteReader(ConfigurationManager.AppSettings["DB_NAME"].ToString(), "select id from s_task where id = " + task.ID);
@@ -336,20 +336,65 @@
             }
             return dico;
         }
-        public static List<Task> LoadAllTask()
+        public static List<Box> LoadAllTask()
         {
-            List<Task> tasks = new List<Task>();
+            List<Box> boxes = new List<Box>();
             string query = string.Format(@"SELECT name FROM s_task;");
 
             DataTable ret = DBAdapter.ExecuteReader(ConfigurationManager.AppSettings["DB_NAME"].ToString(), query);
-            Task t;
+            Box t;
             foreach (DataRow result in ret.Rows)
             {
-                t = new Task();
+                t = new Box();
                 t.Load(result.ItemArray[0].ToString());
-                tasks.Add(t);
+                boxes.Add(t);
             }
-            return tasks;
+            return boxes;
+        }
+        public static Box Load(string name)
+        {
+            string query = string.Format(@"SELECT id, name, cyclic, programPath, startDate, maxStartDate, calendarPath, calendarCountry, runMonday, runTuesday, 
+            runWednesday, runThursday, runFriday, runSaturday, runSunday, executeOnDelay, runSecond, runMinute, runHour, executeInterval, intervalTimeUnit, errorMode, multiInstanceMode,
+            runOnSecond, runOnMinute, runOnHour, maxRunOnSecond, maxRunOnMinute, maxRunOnHour, maxRunSecond, maxRunMinute, maxRunHour, noMaxStartDate, manualJobs
+            FROM s_task where name = '{0}';", name);
+
+            DataTable ret = DBAdapter.ExecuteReader(ConfigurationManager.AppSettings["DB_NAME"].ToString(), query);
+            Box b = null;
+            if (ret.Rows.Count > 0)
+            {
+                b = new Box()
+                {
+                    _id = ret.Rows[0].ItemArray[0].ToString(),
+                    _name = ret.Rows[0].ItemArray[1].ToString(),
+                    _cyclic = ret.Rows[0].ItemArray[2].ToString() == "1",
+                    _programPath = ret.Rows[0].ItemArray[3].ToString(),
+                    _startDate = DateTime.Parse(ret.Rows[0].ItemArray[4].ToString()),
+                    _maxStartDate = DateTime.Parse(ret.Rows[0].ItemArray[5].ToString()),
+                    _calendarPath = ret.Rows[0].ItemArray[6].ToString(),
+                    _calendarCountry = ret.Rows[0].ItemArray[7].ToString(),
+                    _runMonday = ret.Rows[0].ItemArray[8].ToString() == "1",
+                    _runThuesday = ret.Rows[0].ItemArray[9].ToString() == "1",
+                    _runWednesday = ret.Rows[0].ItemArray[10].ToString() == "1",
+                    _runThursday = ret.Rows[0].ItemArray[11].ToString() == "1",
+                    _runFriday = ret.Rows[0].ItemArray[12].ToString() == "1",
+                    _runSaturday = ret.Rows[0].ItemArray[13].ToString() == "1",
+                    _runSunday = ret.Rows[0].ItemArray[14].ToString() == "1",
+                    _executeOnDelay = ret.Rows[0].ItemArray[15].ToString() == "1",
+                    _runSecond = int.Parse(ret.Rows[0].ItemArray[16].ToString()),
+                    _runMinute = int.Parse(ret.Rows[0].ItemArray[17].ToString()),
+                    _runHour = int.Parse(ret.Rows[0].ItemArray[18].ToString()),
+                    _executeInterval = int.Parse(ret.Rows[0].ItemArray[19].ToString()),
+                    _executeIntervalTimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), ret.Rows[0].ItemArray[20].ToString()),
+                    _maxRunSecond = int.Parse(ret.Rows[0].ItemArray[30].ToString()),
+                    _maxRunMinute = int.Parse(ret.Rows[0].ItemArray[31].ToString()),
+                    _maxRunHour = int.Parse(ret.Rows[0].ItemArray[32].ToString()),
+                    _noMaxStartDate = ret.Rows[0].ItemArray[33].ToString() == "1"
+                    //ParseJob(ret.Rows[0].ItemArray[34].ToString())
+                    //if (!string.IsNullOrEmpty(ret.Rows[0].ItemArray[21].ToString())) _errorMode = (ErrorMode)Enum.Parse(typeof(ErrorMode), ret.Rows[0].ItemArray[21].ToString()),
+                    //if (!string.IsNullOrEmpty(ret.Rows[0].ItemArray[22].ToString())) _multiInstanceMode = (MultiInstanceMode)Enum.Parse(typeof(MultiInstanceMode), ret.Rows[0].ItemArray[22].ToString()),
+                };
+            }
+            return b;
         }
 
         public void Process()
@@ -431,46 +476,6 @@
             _runSaturday, _runSunday, _executeOnDelay, _runSecond, _runMinute, _runHour, _executeInterval, _executeIntervalTimeUnit, _errorMode, _multiInstanceMode);
 
             MySqlAdapter.ExecuteQuery(ConfigurationManager.AppSettings["DB_NAME"].ToString(), query);
-        }
-        public void Load(string name)
-        {
-            string query = string.Format(@"SELECT id, name, cyclic, programPath, startDate, maxStartDate, calendarPath, calendarCountry, runMonday, runTuesday, 
-            runWednesday, runThursday, runFriday, runSaturday, runSunday, executeOnDelay, runSecond, runMinute, runHour, executeInterval, intervalTimeUnit, errorMode, multiInstanceMode,
-            runOnSecond, runOnMinute, runOnHour, maxRunOnSecond, maxRunOnMinute, maxRunOnHour, maxRunSecond, maxRunMinute, maxRunHour, noMaxStartDate, manualJobs
-            FROM s_task where name = '{0}';", name);
-
-            DataTable ret = DBAdapter.ExecuteReader(ConfigurationManager.AppSettings["DB_NAME"].ToString(), query);
-            if (ret.Rows.Count > 0)
-            {
-                _id = ret.Rows[0].ItemArray[0].ToString();
-                _name = ret.Rows[0].ItemArray[1].ToString();
-                _cyclic = ret.Rows[0].ItemArray[2].ToString() == "1";
-                _programPath = ret.Rows[0].ItemArray[3].ToString();
-                _startDate = DateTime.Parse(ret.Rows[0].ItemArray[4].ToString());
-                _maxStartDate = DateTime.Parse(ret.Rows[0].ItemArray[5].ToString());
-                _calendarPath = ret.Rows[0].ItemArray[6].ToString();
-                _calendarCountry = ret.Rows[0].ItemArray[7].ToString();
-                _runMonday = ret.Rows[0].ItemArray[8].ToString() == "1";
-                _runThuesday = ret.Rows[0].ItemArray[9].ToString() == "1";
-                _runWednesday = ret.Rows[0].ItemArray[10].ToString() == "1";
-                _runThursday = ret.Rows[0].ItemArray[11].ToString() == "1";
-                _runFriday = ret.Rows[0].ItemArray[12].ToString() == "1";
-                _runSaturday = ret.Rows[0].ItemArray[13].ToString() == "1";
-                _runSunday = ret.Rows[0].ItemArray[14].ToString() == "1";
-                _executeOnDelay = ret.Rows[0].ItemArray[15].ToString() == "1";
-                _runSecond = int.Parse(ret.Rows[0].ItemArray[16].ToString());
-                _runMinute = int.Parse(ret.Rows[0].ItemArray[17].ToString());
-                _runHour = int.Parse(ret.Rows[0].ItemArray[18].ToString());
-                _executeInterval = int.Parse(ret.Rows[0].ItemArray[19].ToString());
-                _executeIntervalTimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), ret.Rows[0].ItemArray[20].ToString());
-                if (!string.IsNullOrEmpty(ret.Rows[0].ItemArray[21].ToString())) _errorMode = (ErrorMode)Enum.Parse(typeof(ErrorMode), ret.Rows[0].ItemArray[21].ToString());
-                if (!string.IsNullOrEmpty(ret.Rows[0].ItemArray[22].ToString())) _multiInstanceMode = (MultiInstanceMode)Enum.Parse(typeof(MultiInstanceMode), ret.Rows[0].ItemArray[22].ToString());
-                _maxRunSecond = int.Parse(ret.Rows[0].ItemArray[30].ToString());
-                _maxRunMinute = int.Parse(ret.Rows[0].ItemArray[31].ToString());
-                _maxRunHour = int.Parse(ret.Rows[0].ItemArray[32].ToString());
-                _noMaxStartDate = ret.Rows[0].ItemArray[33].ToString() == "1";
-                ParseJob(ret.Rows[0].ItemArray[34].ToString());
-            }
         }
         public void AddManualExecution(string dump)
         {

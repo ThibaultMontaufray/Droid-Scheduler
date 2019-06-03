@@ -4,7 +4,7 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Runtime.InteropServices;
 
-namespace Droid.Scheduler
+namespace Droid.Scheduler.Core
 {
     public partial class TS_Scheduler : ServiceBase
     {

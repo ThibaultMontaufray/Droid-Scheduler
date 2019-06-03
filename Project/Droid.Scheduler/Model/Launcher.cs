@@ -1,16 +1,16 @@
-﻿namespace Droid.Scheduler
+﻿namespace Droid.Scheduler.Core
 {
     using System.Collections.Generic;
 
     public class Launcher
     {
         #region Attribute
-        private Task _parent;
+        private Box _parent;
         private List<Job> _jobs;
         #endregion
 
         #region Properties
-        public Task Parent
+        public Box Parent
         {
             get { return _parent; }
             set { _parent = value; }
@@ -23,7 +23,7 @@
         #endregion
 
         #region Constructor
-        public Launcher(Task parent)
+        public Launcher(Box parent)
         {
             _jobs = new List<Job>();
             _parent = parent;

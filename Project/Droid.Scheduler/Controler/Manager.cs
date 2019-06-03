@@ -1,4 +1,4 @@
-﻿namespace Droid.Scheduler.Controler
+﻿namespace Droid.Scheduler.Core.Controler
 {
     using System.Collections.Generic;
     using System.IO;
@@ -10,11 +10,11 @@
     {
         #region Attributes
         private static readonly string CONFIG_PATH = @"C:\Users\Thib\Documents\scheduler.config";
-        private static List<Task> _tasks;
+        private static List<Box> _tasks;
         #endregion
 
         #region Properties
-        public static List<Task> Tasks
+        public static List<Box> Tasks
         {
             get { return _tasks; }
             set { _tasks = value; }

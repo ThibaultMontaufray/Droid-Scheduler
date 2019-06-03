@@ -1,4 +1,4 @@
-﻿namespace Droid.Scheduler
+﻿namespace Droid.Scheduler.Core
 {
     using System;
     using System.Collections.Generic;
@@ -23,7 +23,7 @@
         #endregion
 
         #region Attribute
-        private Task _parent;
+        private Box _parent;
         private DateTime _startDate;
         private DateTime _maxStartWindow;
         private StateOfJob _status;
@@ -40,7 +40,7 @@
             get { return _startDate; }
             set { _startDate = value; }
         }
-        public Task Parent
+        public Box Parent
         {
             get { return _parent; }
             set { _parent = value; }
@@ -53,7 +53,7 @@
         #endregion
 
         #region Constructor
-        public Job(Task parent)
+        public Job(Box parent)
         {
             _parent = parent;
             _status = StateOfJob.UNKNOW;

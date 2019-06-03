@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@model Droid.Scheduler.WebUI.Controllers.JobsController;
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+@{
+    ViewData["Title"] = "Job";
+}
+
+@if (SignInManager.IsSignedIn(User))
+{
+    @Html.Partial("_Navigator")
+    <div class="main-content">
+        <h2>Job : @Html.TextBox(Model.Name, null, new { @class = "brain-filter-element-input" })</h2>
+    </div>
+}

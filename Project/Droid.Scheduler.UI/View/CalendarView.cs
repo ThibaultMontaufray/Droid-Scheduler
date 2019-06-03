@@ -6,7 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Droid.Scheduler;
+using Droid.Scheduler.Core;
 
 namespace Droid.Scheduler.UI
 {

@@ -15,6 +15,8 @@
     <PackageTags>Servodroid scheduler public holidays</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyName>Droid.Scheduler.Core</AssemblyName>
+    <RootNamespace>Droid.Scheduler.Core</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

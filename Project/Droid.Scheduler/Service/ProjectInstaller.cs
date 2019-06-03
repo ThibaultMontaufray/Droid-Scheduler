@@ -6,7 +6,7 @@
 //using System.Linq;
 //using System.Threading.Tasks;
 
-//namespace Droid.Scheduler
+//namespace Droid.Scheduler.Core
 //{
 //    [RunInstaller(true)]
 //    public partial class ProjectInstaller : System.Configuration.Install.Installer

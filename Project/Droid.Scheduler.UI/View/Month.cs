@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Droid.Scheduler.Core;
 
 namespace Droid.Scheduler.UI
 {
@@ -73,7 +74,7 @@ namespace Droid.Scheduler.UI
             //_nonWorkingDays = new HolidayCalculator(new DateTime(DateTime.Now.Year, 1, 1), Droid.Scheduler.Properties.Resources.holidays_france);
             _nonWorkingDays = new HolidayCalculator();
             InitializeComponent();
-            _name = Droid.Scheduler.Calendar.MonthNameInJulianCalendar(DateTime.Now);
+            _name = Droid.Scheduler.Core.Calendar.MonthNameInJulianCalendar(DateTime.Now);
 
             Init();
             LoadDays();
@@ -210,7 +211,7 @@ namespace Droid.Scheduler.UI
                 }
                 _dataGridViewCalendar.Rows[_dataGridViewCalendar.Rows.Count - 1].Cells[cellNum].Value = i;
                 _dataGridViewCalendar.Rows[_dataGridViewCalendar.Rows.Count - 1].Cells[cellNum].Style.SelectionForeColor = Color.Black;
-                switch (Droid.Scheduler.Calendar.IsOpenDay(_nonWorkingDays, new DateTime(dt.Year, dt.Month, i)))
+                switch (Droid.Scheduler.Core.Calendar.IsOpenDay(_nonWorkingDays, new DateTime(dt.Year, dt.Month, i)))
                 {
                     case 0 :
                         _dataGridViewCalendar.Rows[_dataGridViewCalendar.Rows.Count - 1].Cells[cellNum].Style.BackColor = Color.WhiteSmoke;

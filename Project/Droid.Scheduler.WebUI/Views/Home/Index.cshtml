@@ -17,7 +17,7 @@
                                 <form asp-controller="Account" asp-action="Logout" method="post">
                                     <button type="submit" class="indexLink"><h2><span>D</span>roid<span>S</span>cheduler</h2></button>
                                     <p>Bienvenue @UserManager.GetUserName(User)!</p>
-                                    @Html.ActionLink("Entrer dans le scheduler", "Dashboard", "Server", null, new { @class = "indexLinkPage" })
+                                    @Html.ActionLink("Entrer dans le scheduler", "Index", "Dashboard", null, new { @class = "indexLinkPage" })
 
                                     @*<div asp-validation-summary="All" class="text-danger"></div>*@
                                     

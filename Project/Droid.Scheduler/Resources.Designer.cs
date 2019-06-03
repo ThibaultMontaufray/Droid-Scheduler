@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Droid.Scheduler {
+namespace Droid.Scheduler.Core {
     using System;
     
     

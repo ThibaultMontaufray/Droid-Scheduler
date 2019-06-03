@@ -1,6 +1,7 @@
 ﻿namespace Droid.Scheduler.UI
 {
     using Droid.Database;
+    using Droid.Scheduler.Core;
     using System;
     using System.Collections.Generic;
     using System.Drawing;
@@ -15,7 +16,7 @@
         public event TaskSettingEventHandler CancelRequested;
 
         private List<string[]> _tasks;
-        private Task _currentTask;
+        private Box _currentTask;
         private HolidayCalculator _holidays;
         #endregion
 
@@ -30,7 +31,7 @@
         #region Constructor
         public TaskSetting()
         {
-            _currentTask = new Task();
+            _currentTask = new Box();
             _tasks = new List<string[]>();
             InitializeComponent();
             dataGridViewException.CellClick += dataGridViewException_CellClick;
@@ -90,16 +91,16 @@
         private void LoadTaskList()
         {
             comboBoxJobSelection.Items.Clear();
-            _tasks = Task.GetListTask();
+            _tasks = Box.GetListTask();
             foreach (var item in _tasks)
             {
                 comboBoxJobSelection.Items.Add(item[2]);
             }
         }
-        private Task GetTask(string taskName)
+        private Box GetTask(string taskName)
         {
             if (string.IsNullOrEmpty(taskName)) return null;
-            Task t = new Task();
+            Box t = new Box();
             t.Load(taskName);
             _currentTask = t;
             return t;
@@ -117,10 +118,10 @@
             _currentTask.CalendarCountry = comboBoxReferencedCalendar.Text;
             switch (_currentTask.CalType)
             {
-                case Task.CalendarType.REFERENCED: radioButtonAppliCalendar.Checked = true; break;
-                case Task.CalendarType.PERSO: radioButtonCreateCalendar.Checked = true; break;
-                case Task.CalendarType.NOCALENDAR: radioButtonNoCalendar.Checked = true; break;
-                case Task.CalendarType.UNKNOW: break;
+                case Box.CalendarType.REFERENCED: radioButtonAppliCalendar.Checked = true; break;
+                case Box.CalendarType.PERSO: radioButtonCreateCalendar.Checked = true; break;
+                case Box.CalendarType.NOCALENDAR: radioButtonNoCalendar.Checked = true; break;
+                case Box.CalendarType.UNKNOW: break;
             }
             checkBoxMonday.Checked = _currentTask.RunMonday;
             checkBoxThuesday.Checked = _currentTask.RunThuesday;
@@ -135,17 +136,17 @@
             numericUpDownDelayHours.Value = _currentTask.ExecuteInterval;
             switch (_currentTask.ModeError)
             {
-                case Task.ErrorMode.NONE: comboBoxErrorMode.Text = "No particular action when job failled"; break;
-                case Task.ErrorMode.ONCE: comboBoxErrorMode.Text = "If failled, relaunch once the job"; break;
-                case Task.ErrorMode.EACH_1_MIN: comboBoxErrorMode.Text = "If failled wait 1 minute, and relaunch once the job"; break;
-                case Task.ErrorMode.EACH_5_MIN: comboBoxErrorMode.Text = "If failled wait 5 minute, and relaunch once the job"; break;
-                case Task.ErrorMode.EACH_10_MIN: comboBoxErrorMode.Text = "If failled wait 10 minute, and relaunch once the job"; break;
+                case Box.ErrorMode.NONE: comboBoxErrorMode.Text = "No particular action when job failled"; break;
+                case Box.ErrorMode.ONCE: comboBoxErrorMode.Text = "If failled, relaunch once the job"; break;
+                case Box.ErrorMode.EACH_1_MIN: comboBoxErrorMode.Text = "If failled wait 1 minute, and relaunch once the job"; break;
+                case Box.ErrorMode.EACH_5_MIN: comboBoxErrorMode.Text = "If failled wait 5 minute, and relaunch once the job"; break;
+                case Box.ErrorMode.EACH_10_MIN: comboBoxErrorMode.Text = "If failled wait 10 minute, and relaunch once the job"; break;
             }
             switch (_currentTask.ModeMultiInstance)
             {
-                case Task.MultiInstanceMode.ONCE: comboBoxMulitInstance.Text = "[ONCE]       Don't launch program if already running"; break;
-                case Task.MultiInstanceMode.MULTI: comboBoxMulitInstance.Text = "[MULTI]      Launch program even if the previews still running"; break;
-                case Task.MultiInstanceMode.QUEUED: comboBoxMulitInstance.Text = "[QUEUED]   Waiting the end of the current program to launch it"; break;
+                case Box.MultiInstanceMode.ONCE: comboBoxMulitInstance.Text = "[ONCE]       Don't launch program if already running"; break;
+                case Box.MultiInstanceMode.MULTI: comboBoxMulitInstance.Text = "[MULTI]      Launch program even if the previews still running"; break;
+                case Box.MultiInstanceMode.QUEUED: comboBoxMulitInstance.Text = "[QUEUED]   Waiting the end of the current program to launch it"; break;
             }
             comboBoxDelayHoursUnit.Text = _currentTask.ExecuteIntervalTimeUnit.ToString().ToLower();
             //switch (task.ExecuteIntervalTimeUnit)
@@ -167,7 +168,7 @@
         }
         private void SaveTask()
         {
-            Task task = new Task();
+            Box task = new Box();
             task.Name = textBoxSettingJobName.Text;
             task.ProgramPath = textBoxSettingProgramPath.Text;
             task.Cyclic = radioButtonRunCyclique.Checked;
@@ -185,16 +186,16 @@
                 task.CalendarPath = textBoxPersonnalCalendarPath.Text;
                 if (radioButtonAppliCalendar.Checked)
                 {
-                    task.CalType = Task.CalendarType.REFERENCED;
+                    task.CalType = Box.CalendarType.REFERENCED;
                     task.CalendarCountry = comboBoxReferencedCalendar.Text;
                 }
                 else if (radioButtonPersonnalCalendar.Checked)
                 {
-                    task.CalType = Task.CalendarType.PERSO;
+                    task.CalType = Box.CalendarType.PERSO;
                 }
                 else
                 {
-                    task.CalType = Task.CalendarType.NOCALENDAR;
+                    task.CalType = Box.CalendarType.NOCALENDAR;
                 }
                 task.RunMonday = checkBoxMonday.Checked;
                 task.RunThuesday = checkBoxThuesday.Checked;
@@ -215,24 +216,24 @@
                 task.MaxRunHour = (int)numericUpDownMaxDateHours.Value;
                 task.NoMaxStartDate = radioButtonMaxStartAlways.Checked;
 
-                if (comboBoxErrorMode.SelectedItem.ToString().Equals("No particular action when job failled")) task.ModeError = Task.ErrorMode.NONE;
-                else if (comboBoxErrorMode.SelectedItem.ToString().Equals("If failled, relaunch once the job")) task.ModeError = Task.ErrorMode.ONCE;
-                else if (comboBoxErrorMode.SelectedItem.ToString().Equals("If failled wait 1 minute, and relaunch once the job")) task.ModeError = Task.ErrorMode.EACH_1_MIN;
-                else if (comboBoxErrorMode.SelectedItem.ToString().Equals("If failled wait 5 minute, and relaunch once the job")) task.ModeError = Task.ErrorMode.EACH_5_MIN;
-                else if (comboBoxErrorMode.SelectedItem.ToString().Equals("If failled wait 10 minute, and relaunch once the job")) task.ModeError = Task.ErrorMode.EACH_10_MIN;
+                if (comboBoxErrorMode.SelectedItem.ToString().Equals("No particular action when job failled")) task.ModeError = Box.ErrorMode.NONE;
+                else if (comboBoxErrorMode.SelectedItem.ToString().Equals("If failled, relaunch once the job")) task.ModeError = Box.ErrorMode.ONCE;
+                else if (comboBoxErrorMode.SelectedItem.ToString().Equals("If failled wait 1 minute, and relaunch once the job")) task.ModeError = Box.ErrorMode.EACH_1_MIN;
+                else if (comboBoxErrorMode.SelectedItem.ToString().Equals("If failled wait 5 minute, and relaunch once the job")) task.ModeError = Box.ErrorMode.EACH_5_MIN;
+                else if (comboBoxErrorMode.SelectedItem.ToString().Equals("If failled wait 10 minute, and relaunch once the job")) task.ModeError = Box.ErrorMode.EACH_10_MIN;
 
-                if (comboBoxMulitInstance.SelectedItem.ToString().Equals("[ONCE]       Don't launch program if already running")) task.ModeMultiInstance = Task.MultiInstanceMode.ONCE;
-                else if (comboBoxMulitInstance.SelectedItem.ToString().Equals("[MULTI]      Launch program even if the previews still running")) task.ModeMultiInstance = Task.MultiInstanceMode.MULTI;
-                else if (comboBoxMulitInstance.SelectedItem.ToString().Equals("[QUEUED]   Waiting the end of the current program to launch it")) task.ModeMultiInstance = Task.MultiInstanceMode.QUEUED;
+                if (comboBoxMulitInstance.SelectedItem.ToString().Equals("[ONCE]       Don't launch program if already running")) task.ModeMultiInstance = Box.MultiInstanceMode.ONCE;
+                else if (comboBoxMulitInstance.SelectedItem.ToString().Equals("[MULTI]      Launch program even if the previews still running")) task.ModeMultiInstance = Box.MultiInstanceMode.MULTI;
+                else if (comboBoxMulitInstance.SelectedItem.ToString().Equals("[QUEUED]   Waiting the end of the current program to launch it")) task.ModeMultiInstance = Box.MultiInstanceMode.QUEUED;
 
-                if (!string.IsNullOrEmpty(comboBoxDelayHoursUnit.SelectedText)) task.ExecuteIntervalTimeUnit = (Task.TimeUnit)Enum.Parse(typeof(Task.TimeUnit), comboBoxDelayHoursUnit.SelectedText);
+                if (!string.IsNullOrEmpty(comboBoxDelayHoursUnit.SelectedText)) task.ExecuteIntervalTimeUnit = (Box.TimeUnit)Enum.Parse(typeof(Box.TimeUnit), comboBoxDelayHoursUnit.SelectedText);
             }
             foreach (DataGridViewRow row in dataGridViewException.Rows)
             {
                 ExecutionException ee = new ExecutionException(row.Cells[0].Value.ToString());
                 task.Exclusion.Add(ee);
             }
-            if (Task.Exist(task)) task.Update();
+            if (Box.Exist(task)) task.Update();
             else task.Save();
         }
         private void EnableCyclicGroups()
@@ -372,13 +373,13 @@
         {
             switch (_currentTask.CalType)
             {
-                case Task.CalendarType.REFERENCED:
+                case Box.CalendarType.REFERENCED:
                     return HolidayCalculator.GetCalendar(_currentTask.CalendarCountry.ToLower());
-                case Task.CalendarType.PERSO:
+                case Box.CalendarType.PERSO:
                     MessageBox.Show("TODO !");
                     return new HolidayCalculator();
-                case Task.CalendarType.UNKNOW:
-                case Task.CalendarType.NOCALENDAR:
+                case Box.CalendarType.UNKNOW:
+                case Box.CalendarType.NOCALENDAR:
                 default:
                     return new HolidayCalculator();
             }
@@ -532,13 +533,13 @@
                 {
                     pictureBoxCountry.Image = imageListCountry.Images[index];
                     _currentTask.CalendarCountry = comboBoxReferencedCalendar.Text;
-                    _currentTask.CalType = Task.CalendarType.REFERENCED;
+                    _currentTask.CalType = Box.CalendarType.REFERENCED;
                     LoadRegions();
                 }
                 else
                 {
                     pictureBoxCountry.Image = imageListCountry.Images[imageListCountry.Images.IndexOfKey("NewCalendar")];
-                    _currentTask.CalType = Task.CalendarType.PERSO;
+                    _currentTask.CalType = Box.CalendarType.PERSO;
                 }
             }
         }
@@ -547,7 +548,7 @@
             if (radioButtonPersonnalCalendar.Checked)
             {
                 pictureBoxCountry.Image = imageListCountry.Images[imageListCountry.Images.IndexOfKey("PersoCalendar")];
-                _currentTask.CalType = Task.CalendarType.PERSO;
+                _currentTask.CalType = Box.CalendarType.PERSO;
             }
         }
         private void radioButtonNoCalendar_CheckedChanged(object sender, EventArgs e)
@@ -555,7 +556,7 @@
             if (radioButtonNoCalendar.Checked)
             {
                 pictureBoxCountry.Image = imageListCountry.Images[imageListCountry.Images.IndexOfKey("NoCalendar")];
-                _currentTask.CalType = Task.CalendarType.NOCALENDAR;
+                _currentTask.CalType = Box.CalendarType.NOCALENDAR;
             }
         }
         private void radioButtonCreateCalendar_CheckedChanged(object sender, EventArgs e)
@@ -563,7 +564,7 @@
             if (radioButtonCreateCalendar.Checked)
             {
                 pictureBoxCountry.Image = imageListCountry.Images[imageListCountry.Images.IndexOfKey("NewCalendar")];
-                _currentTask.CalType = Task.CalendarType.PERSO;
+                _currentTask.CalType = Box.CalendarType.PERSO;
                 OnRequestHappen("NewPersonnalCalendar");
             }
         }
@@ -577,7 +578,7 @@
                 {
                     pictureBoxCountry.Image = imageListCountry.Images[index];
                     _currentTask.CalendarCountry = comboBoxReferencedCalendar.Text;
-                    _currentTask.CalType = Task.CalendarType.REFERENCED;
+                    _currentTask.CalType = Box.CalendarType.REFERENCED;
                 }
                 else pictureBoxCountry.Image = imageListCountry.Images[imageListCountry.Images.IndexOfKey("NewCalendar")];
             }

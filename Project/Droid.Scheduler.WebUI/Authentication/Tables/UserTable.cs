@@ -27,9 +27,7 @@ namespace Droid.Scheduler.WebUI.Context.Tables
         internal const string FieldLockoutEnabled = "LockoutEnabled";
         internal const string FieldAccessFailedCount = "AccessFailedCount";
         internal const string FieldConcurrencyStamp = "ConcurrencyStamp";
-
-
-
+        
 
         internal static string fullTableName = Consts.Schema.Quoted() + "." + TableName.Quoted();
 
