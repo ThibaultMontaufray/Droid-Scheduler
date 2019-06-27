@@ -1,5 +1,6 @@
 ﻿namespace Droid.Scheduler.UI
 {
+    using Droid.Scheduler.Core;
     using System;
     using System.ComponentModel;
     using System.Windows.Forms;

@@ -11,32 +11,41 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Droid.Scheduler.Core", "Dro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Droid.Scheduler.WebUI", "Droid.Scheduler.WebUI\Droid.Scheduler.WebUI.csproj", "{3F366BB0-C313-4C56-AE5D-10D1BF85F55A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Droid.Scheduler.Agent", "Droid.Schedulerr.Agent\Droid.Scheduler.Agent.csproj", "{29B4AE2F-2213-4813-BB4F-42CD521B17E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Droid.Scheduler.Agent", "Droid.Schedulerr.Agent\Droid.Scheduler.Agent.csproj", "{29B4AE2F-2213-4813-BB4F-42CD521B17E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		netcore|Any CPU = netcore|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8CD1E957-1DD4-46D3-A549-FF5837F3A658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8CD1E957-1DD4-46D3-A549-FF5837F3A658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD1E957-1DD4-46D3-A549-FF5837F3A658}.netcore|Any CPU.ActiveCfg = netcore|Any CPU
 		{8CD1E957-1DD4-46D3-A549-FF5837F3A658}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CD1E957-1DD4-46D3-A549-FF5837F3A658}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09C5EB42-1D07-4EF1-B1FF-52842186515D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09C5EB42-1D07-4EF1-B1FF-52842186515D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C5EB42-1D07-4EF1-B1FF-52842186515D}.netcore|Any CPU.ActiveCfg = netcore|Any CPU
+		{09C5EB42-1D07-4EF1-B1FF-52842186515D}.netcore|Any CPU.Build.0 = netcore|Any CPU
 		{09C5EB42-1D07-4EF1-B1FF-52842186515D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09C5EB42-1D07-4EF1-B1FF-52842186515D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{592180B7-B12E-4E5E-BE57-232D2FA563FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{592180B7-B12E-4E5E-BE57-232D2FA563FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{592180B7-B12E-4E5E-BE57-232D2FA563FC}.netcore|Any CPU.ActiveCfg = netcore|Any CPU
+		{592180B7-B12E-4E5E-BE57-232D2FA563FC}.netcore|Any CPU.Build.0 = netcore|Any CPU
 		{592180B7-B12E-4E5E-BE57-232D2FA563FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{592180B7-B12E-4E5E-BE57-232D2FA563FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3F366BB0-C313-4C56-AE5D-10D1BF85F55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3F366BB0-C313-4C56-AE5D-10D1BF85F55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F366BB0-C313-4C56-AE5D-10D1BF85F55A}.netcore|Any CPU.ActiveCfg = netcore|Any CPU
 		{3F366BB0-C313-4C56-AE5D-10D1BF85F55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F366BB0-C313-4C56-AE5D-10D1BF85F55A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{29B4AE2F-2213-4813-BB4F-42CD521B17E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{29B4AE2F-2213-4813-BB4F-42CD521B17E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B4AE2F-2213-4813-BB4F-42CD521B17E0}.netcore|Any CPU.ActiveCfg = netcore|Any CPU
+		{29B4AE2F-2213-4813-BB4F-42CD521B17E0}.netcore|Any CPU.Build.0 = netcore|Any CPU
 		{29B4AE2F-2213-4813-BB4F-42CD521B17E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29B4AE2F-2213-4813-BB4F-42CD521B17E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

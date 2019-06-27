@@ -17,6 +17,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <AssemblyName>Droid.Scheduler.Core</AssemblyName>
     <RootNamespace>Droid.Scheduler.Core</RootNamespace>
+    <Configurations>Debug;Release;netcore</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

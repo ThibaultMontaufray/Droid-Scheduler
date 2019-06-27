@@ -31,7 +31,7 @@
         #region Constructor
         public TaskSetting()
         {
-            _currentTask = new Box();
+            _currentTask = new Box("generic");
             _tasks = new List<string[]>();
             InitializeComponent();
             dataGridViewException.CellClick += dataGridViewException_CellClick;
@@ -100,8 +100,7 @@
         private Box GetTask(string taskName)
         {
             if (string.IsNullOrEmpty(taskName)) return null;
-            Box t = new Box();
-            t.Load(taskName);
+            Box t = Box.Load(taskName);
             _currentTask = t;
             return t;
         }
@@ -168,8 +167,7 @@
         }
         private void SaveTask()
         {
-            Box task = new Box();
-            task.Name = textBoxSettingJobName.Text;
+            Box task = new Box(textBoxSettingJobName.Text);
             task.ProgramPath = textBoxSettingProgramPath.Text;
             task.Cyclic = radioButtonRunCyclique.Checked;
             if (!task.Cyclic)

@@ -296,9 +296,10 @@
         #endregion
 
         #region Constructor
-        public Box()
+        public Box(string name)
         {
             Random r = new Random();
+            _name = Name;
             _calendarType = CalendarType.REFERENCED;
             _calendarCountry = "France";
             _id = "-1";// DateTime.Now.Ticks.ToString();
@@ -345,8 +346,7 @@
             Box t;
             foreach (DataRow result in ret.Rows)
             {
-                t = new Box();
-                t.Load(result.ItemArray[0].ToString());
+                t = Box.Load(result.ItemArray[0].ToString());
                 boxes.Add(t);
             }
             return boxes;
@@ -362,10 +362,9 @@
             Box b = null;
             if (ret.Rows.Count > 0)
             {
-                b = new Box()
+                b = new Box(ret.Rows[0].ItemArray[1].ToString())
                 {
                     _id = ret.Rows[0].ItemArray[0].ToString(),
-                    _name = ret.Rows[0].ItemArray[1].ToString(),
                     _cyclic = ret.Rows[0].ItemArray[2].ToString() == "1",
                     _programPath = ret.Rows[0].ItemArray[3].ToString(),
                     _startDate = DateTime.Parse(ret.Rows[0].ItemArray[4].ToString()),
